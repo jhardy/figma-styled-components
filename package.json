@@ -4,9 +4,9 @@
   "description": "Figma UI styled components",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "keywords": [
     "figma",
     "figma-ui",
@@ -18,5 +18,14 @@
   },
   "homepage": "https://github.com/jhardy/figma-styled-components#readme",
   "author": "Jared Hardy",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
+    "@types/styled-components": "^4.1.18",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "typescript": "^3.5.3"
+  }
 }
