@@ -1,0 +1,22 @@
+{
+  "name": "figma-styled-components",
+  "version": "1.0.0",
+  "description": "Figma UI styled components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "keywords": [
+    "figma",
+    "figma-ui",
+    "styled-components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhardy/figma-styled-components.git"
+  },
+  "homepage": "https://github.com/jhardy/figma-styled-components#readme",
+  "author": "Jared Hardy",
+  "license": "ISC"
+}
