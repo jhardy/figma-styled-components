@@ -1,6 +1,6 @@
 {
   "name": "figma-styled-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Figma UI styled components",
   "main": "lib/index.js",
   "scripts": {
@@ -20,9 +20,7 @@
   "homepage": "https://github.com/jhardy/figma-styled-components#readme",
   "author": "Jared Hardy",
   "license": "ISC",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
