@@ -16,7 +16,8 @@ import {Button, Checkbox, Input, Label, SectionTitle, Select, Switch, Text} from
 ...
 
 ```
-[[Some what more thorough Example Here](https://github.com/jhardy/figma-styled-components/blob/master/example.tsx)
+
+[Some what more thorough Example Here](https://github.com/jhardy/figma-styled-components/blob/master/example.tsx)
 
 
 ### Todo
