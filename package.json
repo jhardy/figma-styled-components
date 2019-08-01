@@ -20,13 +20,18 @@
   "homepage": "https://github.com/jhardy/figma-styled-components#readme",
   "author": "Jared Hardy",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+
+  },
+  "peerDependencies": {
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
     "@types/styled-components": "^4.1.18",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
     "typescript": "^3.5.3"
   }
 }
