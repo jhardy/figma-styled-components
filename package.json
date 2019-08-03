@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "description": "Figma UI styled components",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
