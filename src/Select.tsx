@@ -3,15 +3,16 @@ import * as React from "react";
 
 import {Text} from './Text'
 
-interface SelectOptionItem {
+export interface SelectOptionItem {
   label: string;
   value?: string;
 }
 
-interface SelectOptions extends SelectOptionItem  {
+export interface SelectOptions extends SelectOptionItem  {
   group?: SelectOptions[]
 }
-interface SelectProps {
+
+export interface SelectProps {
   options: SelectOptions[] ;
   onChange?: any;
   placeholder?: string;

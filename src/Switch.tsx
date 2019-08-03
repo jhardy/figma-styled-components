@@ -30,10 +30,12 @@ const SwitchSlider = styled.span`
   }
 `;
 
-const SwitchContainerFactory: React.FC<{
-  onChange: React.ReactEventHandler;
+export interface SwitchContainerProps {
   checked: boolean;
-}> = ({ onChange, checked, ...props }) => {
+  onChange: () => void;
+}
+
+const SwitchContainerFactory: React.FC<SwitchContainerProps> = ({ onChange, checked, ...props }) => {
   return (
     <div {...props}>
       <input type="checkbox" onChange={onChange} checked={checked} />
@@ -68,19 +70,12 @@ const SwitchContainer = styled(SwitchContainerFactory)`
   }
 `;
 
-const SwitchLabel = styled.span`
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.005em;
-`;
-
-const SwitchFactory: React.FC<{
-  onChange?: React.ReactEventHandler;
-  checked?: boolean;
-  label: string;
-}> = ({ checked, onChange, label, ...props }) => {
+export interface SwitchProps {
+  onChange?: () => void
+  checked?: boolean
+  label: string
+}
+const SwitchFactory: React.FC<SwitchProps> = ({ checked, onChange, label, ...props }) => {
   return (
     <label {...props}>
       <SwitchContainer onChange={() => {onChange}} checked={checked || false} />

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 export type ButtonVariants = "primary" | undefined;
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: ButtonVariants;
   destructive?: boolean;
   disabled?: boolean;

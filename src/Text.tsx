@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
-type TextSizes = "small" | "medium" | "large" | "xlarge";
-type TextWeights = "normal" | "medium" | "bold";
+export type TextSizes = "small" | "medium" | "large" | "xlarge";
+export type TextWeights = "normal" | "medium" | "bold";
 
 export interface TextProps {
   size?: TextSizes;
