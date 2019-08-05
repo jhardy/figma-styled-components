@@ -1,5 +1,5 @@
 import styled  from "styled-components";
-import {Text} from '../Text/Text'
+import {Text} from '../Text'
 
 export const SectionTitle = styled(Text)`
   display: flex;

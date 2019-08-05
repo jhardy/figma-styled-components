@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as React from "react";
 
-import {Text} from '../Text/Text'
+import {Text} from '../Text'
 
 const SwitchSlider = styled.span`
   position: absolute;
