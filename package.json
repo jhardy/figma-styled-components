@@ -2,9 +2,8 @@
   "name": "figma-styled-components",
   "version": "1.0.9",
   "description": "Figma UI styled components",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
+  "main": "distindex.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
