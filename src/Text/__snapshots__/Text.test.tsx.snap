@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A default Text 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+<span
+  className="c0"
+>
+  Hello
+</span>
+`;
+
+exports[`Text can be on negative 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 13px;
+  -webkit-letter-spacing: .0025em;
+  -moz-letter-spacing: .0025em;
+  -ms-letter-spacing: .0025em;
+  letter-spacing: .0025em;
+  line-height: 24px;
+}
+
+<span
+  className="c0"
+  onNegative={true}
+  size="large"
+>
+  Hello
+</span>
+`;
+
+exports[`Text can be resized 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 13px;
+  -webkit-letter-spacing: -.0025em;
+  -moz-letter-spacing: -.0025em;
+  -ms-letter-spacing: -.0025em;
+  letter-spacing: -.0025em;
+  line-height: 24px;
+}
+
+<span
+  className="c0"
+  size="large"
+>
+  Hello
+</span>
+`;
+
+exports[`Text can have a different weight 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 600;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+<span
+  className="c0"
+>
+  Hello
+</span>
+`;

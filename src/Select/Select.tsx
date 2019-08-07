@@ -9,11 +9,11 @@ export interface SelectOptionItem {
 }
 
 export interface SelectOptions extends SelectOptionItem  {
-  group?: SelectOptions[]
+  group?: SelectOptionItem[]
 }
 
 export interface SelectProps {
-  options: SelectOptions[] ;
+  options: SelectOptions[]
   onChange?: any;
   placeholder?: string;
   noDefault?: boolean;
@@ -153,7 +153,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
         {noDefault && <option />}
         {options.map(option => {
           return option.group?
-            <optgroup label={option.label}>
+            <optgroup label={option.label} key={`opt-group-` + option.label}>
               {option.group.map(item => {
                 return <option key={`group` + item.label} value={item.value || item.label}>{item.label}</option>
               })}
@@ -171,7 +171,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
       <ul className={showOptions ? 'show-options' : undefined}>
         {options.map((option, i) => {
           return option.group ?
-            <SelectGroup>
+            <SelectGroup key={`group-parent-` + i}>
               {option.group.map(item => {
                 return (
                 <SelectItem key={`group-` + item.label} id={item.value || item.label} onClick={() => handleClick(item.value || item.label, item.label)}>
