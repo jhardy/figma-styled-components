@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A default SectionTitle 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  color: rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+<span
+  className="c0"
+>
+  Hello
+</span>
+`;

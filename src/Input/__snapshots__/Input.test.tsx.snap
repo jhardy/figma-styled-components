@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A  Input with placeholder 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin: 1px 0 1px 0;
+  padding: 8px 4px 8px 7px;
+  color: rgba(0,0,0,0.8);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+  background-color: #ffffff;
+  font-family: "Inter",sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+}
+
+.c0:hover {
+  color: rgba(0,0,0,0.8);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.c0:active,
+.c0:focus {
+  padding: 8px 4px 8px 6px;
+  color: #000000;
+  border: 2px solid #18a0fb;
+  border-radius: 2px;
+}
+
+.c0::selection {
+  color: #000000;
+  background-color: rgba(24,145,251,0.3);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0::-moz-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0::placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.3);
+}
+
+<input
+  className="c0"
+  placeholder="Hello"
+/>
+`;
+
+exports[`A default Input 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin: 1px 0 1px 0;
+  padding: 8px 4px 8px 7px;
+  color: rgba(0,0,0,0.8);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+  background-color: #ffffff;
+  font-family: "Inter",sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+}
+
+.c0:hover {
+  color: rgba(0,0,0,0.8);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.c0:active,
+.c0:focus {
+  padding: 8px 4px 8px 6px;
+  color: #000000;
+  border: 2px solid #18a0fb;
+  border-radius: 2px;
+}
+
+.c0::selection {
+  color: #000000;
+  background-color: rgba(24,145,251,0.3);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0::-moz-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0::placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.3);
+}
+
+<input
+  className="c0"
+/>
+`;

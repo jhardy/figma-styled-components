@@ -1,0 +1,617 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A Select with grouped options 1`] = `
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+.c6 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 12px;
+  -webkit-letter-spacing: .005em;
+  -moz-letter-spacing: .005em;
+  -ms-letter-spacing: .005em;
+  letter-spacing: .005em;
+  line-height: 16px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  padding: 0 16px 0 32px;
+  list-style-type: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.c5 svg {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  pointer-events: none;
+}
+
+.c5:hover {
+  background-color: #18a0fb;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin: 1px 0 1px 0 !important;
+  padding: 0 8px 0 8px;
+  text-align: left;
+  cursor: pointer;
+  color: rgba(0,0,0,0.8);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #ffffff;
+  font-family: "Inter",sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+}
+
+.c1 .c3 {
+  margin-left: 8px;
+  color: rgba(0,0,0,0.2);
+}
+
+.c1:hover {
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1:hover .c3 {
+  color: rgba(0,0,0,1);
+}
+
+.c1:focus {
+  padding: 0 7px 0 7px;
+  border: 2px solid #18a0fb;
+  outline: none;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1:focus .c3 {
+  color: rgba(0,0,0,1);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.c0 select {
+  display: none;
+}
+
+.c0 ul {
+  position: absolute;
+  z-index: 2;
+  top: 31px;
+  right: 0;
+  left: 0;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  list-style-type: none;
+  opacity: 0;
+  box-shadow: 0 5px 17px rgba(0,0,0,0.2),0 2px 7px rgba(0,0,0,0.15);
+  background-color: #222222;
+  display: none;
+}
+
+.c0 ul.show-options {
+  opacity: 1;
+  display: block;
+}
+
+.c0 .c4:not(:first-child) {
+  padding: 8px 0 0 0;
+  margin-top: 8px;
+  border-top: solid 1px rgba(255,255,255,0.2);
+}
+
+.c0 .c4:last-child {
+  padding-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <select
+    defaultValue=""
+  >
+    <optgroup
+      label="Group 1"
+    >
+      <option
+        value="1"
+      >
+        Item 1
+      </option>
+      <option
+        value="2"
+      >
+        Item 2
+      </option>
+    </optgroup>
+    <optgroup
+      label="Group 2"
+    >
+      <option
+        value="3"
+      >
+        Item 3
+      </option>
+      <option
+        value="4"
+      >
+        Item 4
+      </option>
+    </optgroup>
+    <optgroup
+      label="Group 3"
+    >
+      <option
+        value="5"
+      >
+        Item 5
+      </option>
+      <option
+        value="6"
+      >
+        Item 6
+      </option>
+    </optgroup>
+  </select>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <span
+      className="c2"
+    />
+    <div
+      className="c3 "
+    >
+      <svg
+        fill="none"
+        height="5"
+        viewBox="0 0 8 5"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </button>
+  <ul>
+    <div
+      className="c4 "
+    >
+      <li
+        className="c5"
+        id="1"
+        onClick={[Function]}
+      >
+        <span
+          className="c6"
+          onNegative={true}
+          size="medium"
+        >
+          Item 1
+        </span>
+      </li>
+      <li
+        className="c5"
+        id="2"
+        onClick={[Function]}
+      >
+        <span
+          className="c6"
+          onNegative={true}
+          size="medium"
+        >
+          Item 2
+        </span>
+      </li>
+    </div>
+    <div
+      className="c4 "
+    >
+      <li
+        className="c5"
+        id="3"
+        onClick={[Function]}
+      >
+        <span
+          className="c6"
+          onNegative={true}
+          size="medium"
+        >
+          Item 3
+        </span>
+      </li>
+      <li
+        className="c5"
+        id="4"
+        onClick={[Function]}
+      >
+        <span
+          className="c6"
+          onNegative={true}
+          size="medium"
+        >
+          Item 4
+        </span>
+      </li>
+    </div>
+    <div
+      className="c4 "
+    >
+      <li
+        className="c5"
+        id="5"
+        onClick={[Function]}
+      >
+        <span
+          className="c6"
+          onNegative={true}
+          size="medium"
+        >
+          Item 5
+        </span>
+      </li>
+      <li
+        className="c5"
+        id="6"
+        onClick={[Function]}
+      >
+        <span
+          className="c6"
+          onNegative={true}
+          size="medium"
+        >
+          Item 6
+        </span>
+      </li>
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`A default Select 1`] = `
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 12px;
+  -webkit-letter-spacing: .005em;
+  -moz-letter-spacing: .005em;
+  -ms-letter-spacing: .005em;
+  letter-spacing: .005em;
+  line-height: 16px;
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  padding: 0 16px 0 32px;
+  list-style-type: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.c4 svg {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  pointer-events: none;
+}
+
+.c4:hover {
+  background-color: #18a0fb;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin: 1px 0 1px 0 !important;
+  padding: 0 8px 0 8px;
+  text-align: left;
+  cursor: pointer;
+  color: rgba(0,0,0,0.8);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #ffffff;
+  font-family: "Inter",sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+}
+
+.c1 .c3 {
+  margin-left: 8px;
+  color: rgba(0,0,0,0.2);
+}
+
+.c1:hover {
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1:hover .c3 {
+  color: rgba(0,0,0,1);
+}
+
+.c1:focus {
+  padding: 0 7px 0 7px;
+  border: 2px solid #18a0fb;
+  outline: none;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1:focus .c3 {
+  color: rgba(0,0,0,1);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.c0 select {
+  display: none;
+}
+
+.c0 ul {
+  position: absolute;
+  z-index: 2;
+  top: 31px;
+  right: 0;
+  left: 0;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  list-style-type: none;
+  opacity: 0;
+  box-shadow: 0 5px 17px rgba(0,0,0,0.2),0 2px 7px rgba(0,0,0,0.15);
+  background-color: #222222;
+  display: none;
+}
+
+.c0 ul.show-options {
+  opacity: 1;
+  display: block;
+}
+
+.c0 .c6:not(:first-child) {
+  padding: 8px 0 0 0;
+  margin-top: 8px;
+  border-top: solid 1px rgba(255,255,255,0.2);
+}
+
+.c0 .c6:last-child {
+  padding-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <select
+    defaultValue=""
+  >
+    <option
+      value="one"
+    >
+      Option One
+    </option>
+    <option
+      value="two"
+    >
+      Option Two
+    </option>
+    <option
+      value="three"
+    >
+      Option Three
+    </option>
+  </select>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <span
+      className="c2"
+    />
+    <div
+      className="c3 "
+    >
+      <svg
+        fill="none"
+        height="5"
+        viewBox="0 0 8 5"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </button>
+  <ul>
+    <li
+      className="c4"
+      id="one"
+      onClick={[Function]}
+    >
+      <span
+        className="c5"
+        onNegative={true}
+        size="medium"
+      >
+        Option One
+      </span>
+    </li>
+    <li
+      className="c4"
+      id="two"
+      onClick={[Function]}
+    >
+      <span
+        className="c5"
+        onNegative={true}
+        size="medium"
+      >
+        Option Two
+      </span>
+    </li>
+    <li
+      className="c4"
+      id="three"
+      onClick={[Function]}
+    >
+      <span
+        className="c5"
+        onNegative={true}
+        size="medium"
+      >
+        Option Three
+      </span>
+    </li>
+  </ul>
+</div>
+`;
