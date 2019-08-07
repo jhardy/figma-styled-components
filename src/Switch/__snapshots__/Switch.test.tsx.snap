@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A checked Switch 1`] = `
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+.c3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition: background-color 0 0.2s;
+  transition: background-color 0 0.2s;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.c3:before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition: background-color 0 0.2s;
+  transition: background-color 0 0.2s;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.c1 {
+  position: relative;
+  width: 24px;
+  height: 12px;
+  margin: 10px 16px 10px 8px;
+}
+
+.c1 input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.c1 input:checked + .c2 {
+  background-color: #000000;
+}
+
+.c1 input:focus {
+  outline: none;
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.c1 input:checked + .c2:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: 1;
+  -ms-flex-item-align: 1;
+  align-self: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  cursor: default;
+}
+
+<label
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="c2 c3"
+    />
+  </div>
+  <span
+    className="c4"
+  >
+    A checked Switch
+  </span>
+</label>
+`;
+
+exports[`A default Switch 1`] = `
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+.c3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition: background-color 0 0.2s;
+  transition: background-color 0 0.2s;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.c3:before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition: background-color 0 0.2s;
+  transition: background-color 0 0.2s;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.c1 {
+  position: relative;
+  width: 24px;
+  height: 12px;
+  margin: 10px 16px 10px 8px;
+}
+
+.c1 input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.c1 input:checked + .c2 {
+  background-color: #000000;
+}
+
+.c1 input:focus {
+  outline: none;
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.c1 input:checked + .c2:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: 1;
+  -ms-flex-item-align: 1;
+  align-self: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  cursor: default;
+}
+
+<label
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="c2 c3"
+    />
+  </div>
+  <span
+    className="c4"
+  >
+    A Switch
+  </span>
+</label>
+`;

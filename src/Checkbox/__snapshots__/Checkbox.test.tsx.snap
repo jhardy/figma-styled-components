@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A checked Checkbox 1`] = `
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+.c3 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+.c3:after {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  content: "";
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%227%22%20viewBox%3D%220%200%208%207%22%20width%3D%228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m1.17647%201.88236%201.88235%201.88236%203.76471-3.76472%201.17647%201.17648-4.94118%204.9412-3.05882-3.05884z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+}
+
+.c1 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.c1 input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.c1 input:checked + .c2 {
+  border: 1px solid #18a0fb;
+  background-color: #18a0fb;
+}
+
+.c1 input:checked .c2:after {
+  display: block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 28px;
+  cursor: default;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .c4 {
+  padding-top: 4px;
+}
+
+<label
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <input
+      checked={true}
+      type="checkbox"
+    />
+    <span
+      className="c2 c3"
+    />
+  </div>
+  <span
+    className="c4 c5"
+  >
+    A checked checkbox
+  </span>
+</label>
+`;
+
+exports[`A default Checkbox 1`] = `
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+}
+
+.c3 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+.c3:after {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  content: "";
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%227%22%20viewBox%3D%220%200%208%207%22%20width%3D%228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m1.17647%201.88236%201.88235%201.88236%203.76471-3.76472%201.17647%201.17648-4.94118%204.9412-3.05882-3.05884z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+}
+
+.c1 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.c1 input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.c1 input:checked + .c2 {
+  border: 1px solid #18a0fb;
+  background-color: #18a0fb;
+}
+
+.c1 input:checked .c2:after {
+  display: block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 28px;
+  cursor: default;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .c4 {
+  padding-top: 4px;
+}
+
+<label
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <input
+      type="checkbox"
+    />
+    <span
+      className="c2 c3"
+    />
+  </div>
+  <span
+    className="c4 c5"
+  >
+    A checkbox
+  </span>
+</label>
+`;
