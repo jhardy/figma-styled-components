@@ -181,7 +181,7 @@ exports[`A Select with grouped options 1`] = `
   className="c0"
 >
   <select
-    defaultValue=""
+    defaultValue="1"
   >
     <optgroup
       label="Group 1"
@@ -232,7 +232,9 @@ exports[`A Select with grouped options 1`] = `
   >
     <span
       className="c2"
-    />
+    >
+      Item 1
+    </span>
     <div
       className="c3 "
     >
@@ -244,10 +246,10 @@ exports[`A Select with grouped options 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z"
           fill="currentColor"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />
       </svg>
     </div>
@@ -261,6 +263,21 @@ exports[`A Select with grouped options 1`] = `
         id="1"
         onClick={[Function]}
       >
+        <svg
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M13.2069 5.20724L7.70688 10.7072L6.99977 11.4144L6.29267 10.7072L3.29267 7.70724L4.70688 6.29303L6.99977 8.58592L11.7927 3.79303L13.2069 5.20724Z"
+            fill="white"
+            fillOpacity="1"
+            fillRule="evenodd"
+          />
+        </svg>
         <span
           className="c6"
           onNegative={true}
@@ -528,7 +545,7 @@ exports[`A default Select 1`] = `
   className="c0"
 >
   <select
-    defaultValue=""
+    defaultValue="one"
   >
     <option
       value="one"
@@ -552,7 +569,9 @@ exports[`A default Select 1`] = `
   >
     <span
       className="c2"
-    />
+    >
+      Option One
+    </span>
     <div
       className="c3 "
     >
@@ -564,10 +583,10 @@ exports[`A default Select 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z"
           fill="currentColor"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />
       </svg>
     </div>
@@ -578,6 +597,21 @@ exports[`A default Select 1`] = `
       id="one"
       onClick={[Function]}
     >
+      <svg
+        fill="none"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M13.2069 5.20724L7.70688 10.7072L6.99977 11.4144L6.29267 10.7072L3.29267 7.70724L4.70688 6.29303L6.99977 8.58592L11.7927 3.79303L13.2069 5.20724Z"
+          fill="white"
+          fillOpacity="1"
+          fillRule="evenodd"
+        />
+      </svg>
       <span
         className="c5"
         onNegative={true}

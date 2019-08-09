@@ -29,11 +29,11 @@ const SelectedCheck = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M13.2069 5.20724L7.70688 10.7072L6.99977 11.4144L6.29267 10.7072L3.29267 7.70724L4.70688 6.29303L6.99977 8.58592L11.7927 3.79303L13.2069 5.20724Z"
         fill="white"
-        fill-opacity="1"
+        fillOpacity="1"
       />
     </svg>
   );
@@ -69,7 +69,7 @@ const SelectGroup = styled.div`
 const SelectChevronIcon = (props:any) => {
   return(
   <div {...props}><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z" fill="currentColor" />
+  <path fillRule="evenodd" clipRule="evenodd" d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z" fill="currentColor" />
   </svg>
   </div>
   )
@@ -122,6 +122,15 @@ const SelectTrigger = styled.button`
   }
 `
 
+const SelectBackdrop = styled.div<{show:boolean}>`
+  width: 100vh;
+  height: 100vh;
+  position: fixed;
+  z-index:1;
+  background:red;
+  display: ${props => props.show ? 'block' : 'none'};
+`
+
 
 export const SelectFactory: React.FC<SelectProps> = ({
   options,
@@ -131,24 +140,64 @@ export const SelectFactory: React.FC<SelectProps> = ({
   ...props
 }) => {
   const selectInput = React.useRef<HTMLSelectElement>();
-  const [selectedOption, setOption] = React.useState({value: '', label: ''});
+
+  const getInitalValue = (options:SelectOptions[]) => {
+    if(options[0].group) {
+      return options[0].group[0].label ? {value: options[0].group[0].value, label: options[0].group[0].label}  : {value: options[0].group[0].value, label: options[0].group[0].value }
+    } else {
+      return options[0].label ? {value: options[0].value, label: options[0].label } : {value: options[0].value, label: options[0].value }
+    }
+
+  }
+
+  const [selectedOption, setOption] = React.useState(getInitalValue(options));
+  const [hasMadeSelection, setHasMadeSelection] = React.useState(placeholder? false : true)
   const [showOptions, setOptionsVisiblity] = React.useState(false)
+  const test = getInitalValue(options)
+
   const handleClick = (value:string, label:string) => {
+    setHasMadeSelection(true)
     const ensureLabel = label === '' ? value : label
     setOption({value: value, label:ensureLabel});
     setOptionsVisiblity(false)
   };
 
+
+  const wrapperRef = React.useRef(null);
+
   const toggleSelect = (e:any) => {
     setOptionsVisiblity(!showOptions)
+
   }
 
+  function useOutsideAlerter(ref:any) {
+
+    function handleClickOutside(event:any) {
+      if (ref.current && !ref.current.contains(event.target)) {
+
+        toggleSelect(event)
+      }
+    }
+
+    React.useEffect(() => {
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    });
+  }
+
+  useOutsideAlerter(wrapperRef);
+
   return (
-    <div {...props}>
+    <div {...props} ref={wrapperRef}>
+
       <select
         ref={selectInput as any /* this is :(, fix soon!*/ }
         onChange={onChange}
-        defaultValue={selectedOption.value ? selectedOption.value : ''}
+        defaultValue={placeholder ? '' : selectedOption.value}
       >
         {noDefault && <option />}
         {options.map(option => {
@@ -165,7 +214,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
         })}
       </select>
       <SelectTrigger onClick={toggleSelect}>
-        <Text>{selectedOption.label && selectedOption.label !== '' ? selectedOption.label : placeholder}</Text>
+        <Text>{placeholder && !hasMadeSelection ?  placeholder : selectedOption.label}</Text>
         <SelectChevron />
       </SelectTrigger>
       <ul className={showOptions ? 'show-options' : undefined}>
@@ -175,7 +224,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
               {option.group.map(item => {
                 return (
                 <SelectItem key={`group-` + item.label} id={item.value || item.label} onClick={() => handleClick(item.value || item.label, item.label)}>
-                  {selectedOption.value === item.value && <SelectedCheck />}
+                  {selectedOption.value === item.value && hasMadeSelection && <SelectedCheck />}
                   <Text size="medium" onNegative>
                     {item.label}
                   </Text>

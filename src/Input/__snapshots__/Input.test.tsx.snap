@@ -2,6 +2,7 @@
 
 exports[`A  Input with placeholder 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,6 +76,7 @@ exports[`A  Input with placeholder 1`] = `
 
 exports[`A default Input 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
