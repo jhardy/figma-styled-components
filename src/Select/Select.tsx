@@ -69,7 +69,7 @@ const SelectGroup = styled.div`
 const SelectChevronIcon = (props:any) => {
   return(
   <div {...props}><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z" fill="currentColor" />
+  <path fillRule="evenodd" clip-rule="evenodd" d="M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z" fill="currentColor" />
   </svg>
   </div>
   )

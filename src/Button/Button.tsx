@@ -88,9 +88,9 @@ const getDestructiveStyles = (variant: ButtonVariants) => {
 
 
 export const Button = styled.button<ButtonProps>`
+  box-sizing: border-box;
  display: inline-block;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   margin: 1px 0 1px 0;
   padding: 5px 16px 5px 16px;
   border: 2px solid transparent;

@@ -1,0 +1,17 @@
+.text-block {
+  margin: 12px 0;
+  padding: 0px 20px;
+  border: solid 1px #ccc;
+}
+
+
+.text-components ul {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+}
+
+.negative-text {
+  background: #000;
+}
+
