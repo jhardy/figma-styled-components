@@ -140,17 +140,34 @@ export const SelectFactory: React.FC<SelectProps> = ({
   ...props
 }) => {
   const selectInput = React.useRef<HTMLSelectElement>();
-  const [selectedOption, setOption] = React.useState({value: '', label: ''});
+
+  const getInitalValue = (options:SelectOptions[]) => {
+    if(options[0].group) {
+      return options[0].group[0].label ? {value: options[0].group[0].value, label: options[0].group[0].label}  : {value: options[0].group[0].value, label: options[0].group[0].value }
+    } else {
+      return options[0].label ? {value: options[0].value, label: options[0].label } : {value: options[0].value, label: options[0].value }
+    }
+
+  }
+
+  const [selectedOption, setOption] = React.useState(getInitalValue(options));
+  const [hasMadeSelection, setHasMadeSelection] = React.useState(placeholder? false : true)
   const [showOptions, setOptionsVisiblity] = React.useState(false)
+  const test = getInitalValue(options)
+
   const handleClick = (value:string, label:string) => {
+    setHasMadeSelection(true)
     const ensureLabel = label === '' ? value : label
     setOption({value: value, label:ensureLabel});
     setOptionsVisiblity(false)
   };
+
+
   const wrapperRef = React.useRef(null);
 
   const toggleSelect = (e:any) => {
     setOptionsVisiblity(!showOptions)
+
   }
 
   function useOutsideAlerter(ref:any) {
@@ -180,7 +197,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
       <select
         ref={selectInput as any /* this is :(, fix soon!*/ }
         onChange={onChange}
-        defaultValue={selectedOption.value ? selectedOption.value : ''}
+        defaultValue={placeholder ? '' : selectedOption.value}
       >
         {noDefault && <option />}
         {options.map(option => {
@@ -197,7 +214,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
         })}
       </select>
       <SelectTrigger onClick={toggleSelect}>
-        <Text>{selectedOption.label && selectedOption.label !== '' ? selectedOption.label : placeholder}</Text>
+        <Text>{placeholder && !hasMadeSelection ?  placeholder : selectedOption.label}</Text>
         <SelectChevron />
       </SelectTrigger>
       <ul className={showOptions ? 'show-options' : undefined}>
@@ -207,7 +224,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
               {option.group.map(item => {
                 return (
                 <SelectItem key={`group-` + item.label} id={item.value || item.label} onClick={() => handleClick(item.value || item.label, item.label)}>
-                  {selectedOption.value === item.value && <SelectedCheck />}
+                  {selectedOption.value === item.value && hasMadeSelection && <SelectedCheck />}
                   <Text size="medium" onNegative>
                     {item.label}
                   </Text>
