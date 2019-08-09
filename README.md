@@ -17,14 +17,13 @@ import {Button, Checkbox, Input, Label, SectionTitle, Select, Switch, Text} from
 
 ```
 
-[Some what more thorough example here](https://github.com/jhardy/figma-styled-components/blob/master/example.tsx)
+## Documentation
+Install dependency with `yarn` and then run `yarn storybook` to build the storybook for this project
 
 
 ### Todo
-* Document!
+* Document more, deploy somewhere.
 * Use a theme wrapper
-* Write Tests
-* Handle Select Events Better
 * Icons and Icon buttons
 * Text area
 * Inputs with icons
