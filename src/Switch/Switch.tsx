@@ -31,7 +31,7 @@ const SwitchSlider = styled.span`
 `;
 
 export interface SwitchContainerProps {
-  checked: boolean;
+  checked?: boolean;
   onChange: () => void;
 }
 
@@ -78,7 +78,7 @@ export interface SwitchProps {
 const SwitchFactory: React.FC<SwitchProps> = ({ checked, onChange, label, ...props }) => {
   return (
     <label {...props}>
-      <SwitchContainer onChange={() => {onChange}} checked={checked || false} />
+      <SwitchContainer onChange={() => {onChange}} checked={checked} />
       <Text>{label}</Text>
     </label>
   );

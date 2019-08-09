@@ -2,8 +2,8 @@
 
 exports[`A default Button 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: inline-block;
-  -ms-flex-negative: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -39,8 +39,8 @@ exports[`A default Button 1`] = `
 
 exports[`A disabped Button 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: inline-block;
-  -ms-flex-negative: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -77,8 +77,8 @@ exports[`A disabped Button 1`] = `
 
 exports[`A primary Button 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: inline-block;
-  -ms-flex-negative: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
