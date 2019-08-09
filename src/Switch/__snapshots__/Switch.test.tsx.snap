@@ -222,7 +222,6 @@ exports[`A default Switch 1`] = `
     className="c1"
   >
     <input
-      checked={false}
       onChange={[Function]}
       type="checkbox"
     />
