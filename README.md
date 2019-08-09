@@ -27,3 +27,4 @@ Install dependency with `yarn` and then run `yarn storybook` to build the storyb
 * Icons and Icon buttons
 * Text area
 * Inputs with icons
+* Handle OptionStrip default selection

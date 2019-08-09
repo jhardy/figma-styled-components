@@ -10,8 +10,14 @@ import {
   SectionTitle,
   Select,
   Switch,
-  Text
+  Text,
+  OptionStrip
 } from "../src";
+
+
+const testIcon = <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H14V1H0V0ZM0 4H8V5H0V4ZM10 8H0V9H10V8Z" fill="black"/>
+</svg>
 
 storiesOf("Button", module)
 .add("Variants", () => (
@@ -62,6 +68,13 @@ storiesOf("Checkbox", module)
 storiesOf("Input", module).add("Input", () => (
   <Input placeholder="I am an input" />
 ));
+
+storiesOf("Options Strip", module).add("Options Strip", () => (
+  <div>
+    <Label> Test Label</Label>
+    <OptionStrip options={[{value: '1', label: testIcon}, {value: '2', label: 'Two'}, {value: '3', label:'Three'}]} />
+  </div>
+))
 
 storiesOf("Text Components", module)
   .add("Section Tile", () => <SectionTitle>I am a section title</SectionTitle>)
