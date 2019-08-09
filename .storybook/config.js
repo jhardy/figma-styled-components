@@ -1,4 +1,6 @@
 import { configure } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 
 function loadStories() {
   require('../stories/index.tsx');
@@ -6,3 +8,4 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+addDecorator(withInfo);

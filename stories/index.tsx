@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import "./storybook.css";
-//import { Button } from '@storybook/react/demo';
+
 import {
   Button,
   Checkbox,
@@ -12,9 +12,9 @@ import {
   Switch,
   Text
 } from "../src";
-import { add } from "store2";
 
-storiesOf("Button", module).add("Variants", () => (
+storiesOf("Button", module)
+.add("Variants", () => (
   <div>
     <Text size="xlarge">Primary</Text>
     <br />
@@ -54,7 +54,8 @@ storiesOf("Button", module).add("Variants", () => (
   </div>
 ));
 
-storiesOf("Checkbox", module).add("Checkbox", () => (
+storiesOf("Checkbox", module)
+.add("Checkbox", () => (
   <Checkbox label="I am a checkbox, click me" />
 ));
 
