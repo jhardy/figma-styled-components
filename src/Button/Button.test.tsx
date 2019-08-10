@@ -1,7 +1,6 @@
-import * as React from 'react'
-import styled from 'styled-components'
-import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
+import * as React from 'react'
+import * as renderer from 'react-test-renderer'
 
 import { Button } from './Button'
 
@@ -12,17 +11,17 @@ test('A default Button', () => {
 })
 
 test('A primary Button', () => {
-  const tree = renderer.create(<Button variant="primary" />)
+  const tree = renderer.create(<Button variant='primary' />)
   expect(tree).toMatchSnapshot()
-} )
+})
 
 test('A destructive Button', () => {
-  const tree = renderer.create(<Button destructive />)
+  const tree = renderer.create(<Button destructive={true} />)
 })
 
 
 test('A disabped Button', () => {
-  const tree = renderer.create(<Button disabled />).toJSON()
+  const tree = renderer.create(<Button disabled={true} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 

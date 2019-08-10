@@ -1,6 +1,6 @@
 {
   "name": "figma-styled-components",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Figma UI styled components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,10 @@
     "babel-loader": "^8.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "tslint": "^5.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-react": "^4.0.0"
   },
   "peerDependencies": {},
   "devDependencies": {

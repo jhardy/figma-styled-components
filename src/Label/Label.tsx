@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {Text} from '../Text'
+import styled from 'styled-components'
+import { Text } from '../Text'
 
 export const Label = styled(Text)`
   display: flex;
@@ -7,4 +7,4 @@ export const Label = styled(Text)`
   height: 32px;
   color: rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
-`;
+`

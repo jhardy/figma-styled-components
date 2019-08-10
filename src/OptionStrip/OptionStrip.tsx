@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import * as React from "react";
-import { JSXElement } from "@babel/types";
+import { JSXElement } from '@babel/types'
+import * as React from 'react'
+import styled from 'styled-components'
 import { Text } from '../Text'
 
 /* TODO Type label better to accept, strings, numbers, and SVG */
@@ -29,9 +29,9 @@ const OptionStripContainer = styled.div`
 `
 
 
-const OptionStripOption = styled.div<{selected?:boolean}>`
+const OptionStripOption = styled.div<{selected?: boolean}>`
   align-items: center;
-  background: ${props => props.selected ? 'rgba(0,0,0,0.1)' : 'transparent'};
+  background: ${(props) => props.selected ? 'rgba(0,0,0,0.1)' : 'transparent'};
   box-sizing: border-box;
   border-radius: 2px;
   display:inline-flex;
@@ -42,6 +42,10 @@ const OptionStripOption = styled.div<{selected?:boolean}>`
   padding: 5px;
   position: relative;
 
+  ${Text} {
+    line-height: 0;
+  }
+
   input {
     position: absolute;
     width: 100%;
@@ -51,25 +55,24 @@ const OptionStripOption = styled.div<{selected?:boolean}>`
 
 `
 
-const OptionStripFactory: React.FC<OptionStripProps> = ({options, defaultSelected, onChange, ...props}) => {
-  const [selectedOption, setOption] = React.useState(options[0].value);
+const OptionStripFactory: React.FC<OptionStripProps> = ({ options, defaultSelected, onChange, ...props }) => {
+  const [selectedOption, setOption] = React.useState(options[0].value)
 
-   const handleChange = (event:any) => {
-      setOption(event.target.value)
-      console.log(event.target, event.target.value)
-      console.log("selectedOptions:", selectedOption)
-      if(onChange) {
-        onChange()
-      }
+  const handleChange = (event: any) => {
+    setOption(event.target.value)
+
+    if (onChange) {
+      onChange()
+    }
   }
 
   return(
     <OptionStripContainer {...props}>
-      {options.map( (option, i) => {
+      {options.map((option, i) => {
         return(
         <OptionStripOption key={`options-strip-item-` + option.value} selected={option.value === selectedOption}>
-          <input type="checkbox" onChange={handleChange} value={option.value} checked={option.value === selectedOption ? true : false} />
-          <Text size="small">{option.label? option.label : option.value}</Text>
+          <input type='checkbox' onChange={handleChange} value={option.value} checked={option.value === selectedOption ? true : false} />
+          <Text size='small'>{option.label ? option.label : option.value}</Text>
         </OptionStripOption>)
       })}
     </OptionStripContainer>

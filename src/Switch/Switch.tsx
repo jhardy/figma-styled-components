@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import * as React from "react";
+import * as React from 'react'
+import styled from 'styled-components'
 
-import {Text} from '../Text'
+import { Text } from '../Text'
 
 const SwitchSlider = styled.span`
   position: absolute;
@@ -28,21 +28,21 @@ const SwitchSlider = styled.span`
     border-radius: 50%;
     background-color: white;
   }
-`;
+`
 
 export interface SwitchContainerProps {
-  checked?: boolean;
-  onChange: () => void;
+  checked?: boolean
+  onChange: () => void
 }
 
 const SwitchContainerFactory: React.FC<SwitchContainerProps> = ({ onChange, checked, ...props }) => {
   return (
     <div {...props}>
-      <input type="checkbox" onChange={onChange} checked={checked} />
+      <input type='checkbox' onChange={onChange} checked={checked} />
       <SwitchSlider />
     </div>
-  );
-};
+  )
+}
 
 const SwitchContainer = styled(SwitchContainerFactory)`
   position: relative;
@@ -68,21 +68,23 @@ const SwitchContainer = styled(SwitchContainerFactory)`
   input:checked + ${SwitchSlider}:before {
     transform: translateX(12px);
   }
-`;
+`
 
 export interface SwitchProps {
   onChange?: () => void
   checked?: boolean
   label: string
 }
+// tslint:disable:jsx-no-lambda
+// tslint:disable:no-unused-expression
 const SwitchFactory: React.FC<SwitchProps> = ({ checked, onChange, label, ...props }) => {
   return (
     <label {...props}>
-      <SwitchContainer onChange={() => {onChange}} checked={checked} />
+      <SwitchContainer onChange={() => { onChange }} checked={checked} />
       <Text>{label}</Text>
     </label>
-  );
-};
+  )
+}
 
 export const Switch = styled(SwitchFactory)`
   position: relative;
@@ -91,4 +93,4 @@ export const Switch = styled(SwitchFactory)`
   align-self: 1;
   flex-direction: row;
   cursor: default;
-`;
+`
