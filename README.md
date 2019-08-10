@@ -18,13 +18,18 @@ import {Button, Checkbox, Input, Label, SectionTitle, Select, Switch, Text} from
 ```
 
 ## Documentation
+
+Current documentation is in [storybook project here](https://determined-borg-d1ccaa.netlify.com/)
+
+
+#### Locally
 Install dependency with `yarn` and then run `yarn storybook` to build the storybook for this project
 
 
 ### Todo
-* Document more, deploy somewhere.
+* Document component interfaces better.
 * Use a theme wrapper
-* Icons and Icon buttons
+* Icons
 * Text area
 * Inputs with icons
 * Handle OptionStrip default selection
