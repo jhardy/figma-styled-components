@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Input = styled.input`
   box-sizing: border-box;
@@ -44,4 +44,4 @@ export const Input = styled.input`
   &:disabled {
     color: rgba(0, 0, 0, 0.3);
   }
-`;
+`

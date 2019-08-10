@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import * as React from "react";
+import * as React from 'react'
+import styled from 'styled-components'
+import { Text } from '../Text'
 
-import {Text} from '../Text'
 
 const CheckboxMark = styled.span`
   position: absolute;
@@ -22,7 +22,7 @@ const CheckboxMark = styled.span`
     background-repeat: no-repeat;
     background-position: 2px 3px;
   }
-`;
+`
 
 export interface CheckboxContainerProps {
   checked?: boolean,
@@ -31,11 +31,11 @@ export interface CheckboxContainerProps {
 const CheckboxContainerFacotry: React.FC<CheckboxContainerProps> = ({ onChange, checked, ...props }) => {
   return (
     <div {...props}>
-      <input type="checkbox" onChange={onChange} checked={checked} />
+      <input type='checkbox' onChange={onChange} checked={checked} />
       <CheckboxMark />
     </div>
-  );
-};
+  )
+}
 
 const CheckboxContainer = styled(CheckboxContainerFacotry)`
   position: relative;
@@ -57,13 +57,13 @@ const CheckboxContainer = styled(CheckboxContainerFacotry)`
   input:checked ${CheckboxMark}:after {
     display: block;
   }
-`;
+`
 
 
 export interface CheckboxProps {
-  onChange?: () => void;
-  checked?: boolean;
-  label: string;
+  onChange?: () => void
+  checked?: boolean
+  label: string
 }
 const CheckboxFactory: React.FC<CheckboxProps> = ({ onChange, label, checked, ...props }) => {
   return (
@@ -71,8 +71,8 @@ const CheckboxFactory: React.FC<CheckboxProps> = ({ onChange, label, checked, ..
       <CheckboxContainer onChange={onChange} checked={checked} />
       <Text>{label}</Text>
     </label>
-  );
-};
+  )
+}
 
 export const Checkbox = styled(CheckboxFactory)`
   display: flex;
@@ -84,4 +84,4 @@ export const Checkbox = styled(CheckboxFactory)`
   ${Text} {
     padding-top: 4px;
   }
-`;
+`

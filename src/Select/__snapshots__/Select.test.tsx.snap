@@ -260,6 +260,8 @@ exports[`A Select with grouped options 1`] = `
     >
       <li
         className="c5"
+        data-label="Item 1"
+        data-value="1"
         id="1"
         onClick={[Function]}
       >
@@ -288,6 +290,8 @@ exports[`A Select with grouped options 1`] = `
       </li>
       <li
         className="c5"
+        data-label="Item 2"
+        data-value="2"
         id="2"
         onClick={[Function]}
       >
@@ -305,6 +309,8 @@ exports[`A Select with grouped options 1`] = `
     >
       <li
         className="c5"
+        data-label="Item 3"
+        data-value="3"
         id="3"
         onClick={[Function]}
       >
@@ -318,6 +324,8 @@ exports[`A Select with grouped options 1`] = `
       </li>
       <li
         className="c5"
+        data-label="Item 4"
+        data-value="4"
         id="4"
         onClick={[Function]}
       >
@@ -335,6 +343,8 @@ exports[`A Select with grouped options 1`] = `
     >
       <li
         className="c5"
+        data-label="Item 5"
+        data-value="5"
         id="5"
         onClick={[Function]}
       >
@@ -348,6 +358,8 @@ exports[`A Select with grouped options 1`] = `
       </li>
       <li
         className="c5"
+        data-label="Item 6"
+        data-value="6"
         id="6"
         onClick={[Function]}
       >
@@ -594,6 +606,8 @@ exports[`A default Select 1`] = `
   <ul>
     <li
       className="c4"
+      data-label="Option One"
+      data-value="one"
       id="one"
       onClick={[Function]}
     >
@@ -622,6 +636,8 @@ exports[`A default Select 1`] = `
     </li>
     <li
       className="c4"
+      data-label="Option Two"
+      data-value="two"
       id="two"
       onClick={[Function]}
     >
@@ -635,6 +651,8 @@ exports[`A default Select 1`] = `
     </li>
     <li
       className="c4"
+      data-label="Option Three"
+      data-value="three"
       id="three"
       onClick={[Function]}
     >
