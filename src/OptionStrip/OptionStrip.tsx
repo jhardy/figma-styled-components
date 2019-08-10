@@ -71,7 +71,7 @@ const OptionStripFactory: React.FC<OptionStripProps> = ({ options, defaultSelect
         return(
         <OptionStripOption key={`options-strip-item-` + option.value} selected={option.value === selectedOption}>
           <input type='checkbox' onChange={handleChange} value={option.value} checked={option.value === selectedOption ? true : false} />
-          <Text size='small'>{option.label ? option.label : option.value}</Text>
+          <Text size='ui11'>{option.label ? option.label : option.value}</Text>
         </OptionStripOption>)
       })}
     </OptionStripContainer>

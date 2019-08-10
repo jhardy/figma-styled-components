@@ -1,32 +1,32 @@
 import styled, { css } from 'styled-components'
 
-export type TextSizes = 'small' | 'medium' | 'large' | 'xlarge'
+export type TextSizes = 'ui11' | 'ui12' | 'ui13' | 'ui14'
 export type TextWeights = 'normal' | 'medium' | 'bold'
 
 export interface TextProps {
   size?: TextSizes
   weight?: TextWeights
-  onNegative?: boolean
+  inverted?: boolean
 }
    // tslint:disable:object-literal-sort-keys
 const textAttributes = {
-  small: {
+  ui11: {
     fontSize: `11px`,
     lineHeight: `16px`,
 
     letterSpacing: { positive: `0.005em`, negative: `.01em` }
   },
-  medium: {
+  ui12: {
     fontSize: `12px`,
     lineHeight: `16px`,
     letterSpacing: { positive: `0`, negative: `.005em;` }
   },
-  large: {
+  ui13: {
     fontSize: `13px`,
     lineHeight: `24px`,
     letterSpacing: { positive: `-.0025em`, negative: `.0025em` }
   },
-  xlarge: {
+  ui14: {
     fontSize: `14px`,
     lineHeight: `24px`,
     letterSpacing: { positive: `-.001em`, negative: `-.001em` }
@@ -45,12 +45,12 @@ const getTextWeight = (weight: TextWeights) => {
 }
 
 const getTextStyles = (
-  size: TextSizes = 'small',
+  size: TextSizes = 'ui11',
   weight: TextWeights = 'normal',
-  negative: boolean = false
+  onNegative: boolean = false
 ) => {
   const textStyles = textAttributes[size]
-  const variant = negative ? 'negative' : 'positive'
+  const variant = onNegative ? 'negative' : 'positive'
 
   return css`
     font-weight: ${getTextWeight(weight)};
@@ -65,6 +65,6 @@ export const Text = styled.span<TextProps>`
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
-  color: ${(props) => (props.onNegative ? '#ffffff' : 'rgba(0, 0, 0, 0.8)')};
-  ${(props) => getTextStyles(props.size, props.weight, props.onNegative)}
+  color: ${(props) => (props.inverted ? '#ffffff' : 'rgba(0, 0, 0, 0.8)')};
+  ${(props) => getTextStyles(props.size, props.weight, props.inverted)}
 `

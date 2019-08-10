@@ -1,6 +1,6 @@
 {
   "name": "figma-styled-components",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Figma UI styled components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

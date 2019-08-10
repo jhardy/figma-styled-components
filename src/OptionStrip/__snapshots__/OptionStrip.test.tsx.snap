@@ -123,7 +123,7 @@ exports[`A default option strip 1`] = `
     />
     <span
       className="c2 c3"
-      size="small"
+      size="ui11"
     >
       One
     </span>
@@ -140,7 +140,7 @@ exports[`A default option strip 1`] = `
     />
     <span
       className="c2 c3"
-      size="small"
+      size="ui11"
     >
       Two
     </span>
