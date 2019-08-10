@@ -1,5 +1,5 @@
-import styled  from "styled-components";
-import {Text} from '../Text'
+import styled from 'styled-components'
+import { Text } from '../Text'
 
 export const SectionTitle = styled(Text)`
   display: flex;
@@ -8,4 +8,4 @@ export const SectionTitle = styled(Text)`
   color: rgba(0, 0, 0, 0.8);
   background-color: #ffffff;
   font-weight: 600;
-`;
+`

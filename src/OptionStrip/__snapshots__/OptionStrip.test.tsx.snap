@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`A default option strip 1`] = `
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,6 +60,10 @@ exports[`A default option strip 1`] = `
   position: relative;
 }
 
+.c1 .c2 {
+  line-height: 0;
+}
+
 .c1 input {
   position: absolute;
   width: 100%;
@@ -67,7 +71,7 @@ exports[`A default option strip 1`] = `
   opacity: 0;
 }
 
-.c3 {
+.c4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -93,7 +97,11 @@ exports[`A default option strip 1`] = `
   position: relative;
 }
 
-.c3 input {
+.c4 .c2 {
+  line-height: 0;
+}
+
+.c4 input {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -114,14 +122,14 @@ exports[`A default option strip 1`] = `
       value="1"
     />
     <span
-      className="c2"
+      className="c2 c3"
       size="small"
     >
       One
     </span>
   </div>
   <div
-    className="c3"
+    className="c4"
     selected={false}
   >
     <input
@@ -131,7 +139,7 @@ exports[`A default option strip 1`] = `
       value="2"
     />
     <span
-      className="c2"
+      className="c2 c3"
       size="small"
     >
       Two

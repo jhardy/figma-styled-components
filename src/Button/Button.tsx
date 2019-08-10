@@ -1,12 +1,12 @@
 
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
-export type ButtonVariants = "primary" | undefined;
+export type ButtonVariants = 'primary' | undefined
 
 export interface ButtonProps {
-  variant?: ButtonVariants;
-  destructive?: boolean;
-  disabled?: boolean;
+  variant?: ButtonVariants
+  destructive?: boolean
+  disabled?: boolean
 }
 
 const getButtonStyles = (
@@ -14,10 +14,10 @@ const getButtonStyles = (
   disabled: boolean
 ) => {
   switch (variant) {
-    case "primary":
+    case 'primary':
       return css`
         color: #ffffff;
-        background-color: ${disabled ? "rgba(0, 0, 0, 0.3)" : "#18a0fb"};
+        background-color: ${disabled ? 'rgba(0, 0, 0, 0.3)' : '#18a0fb'};
         font-family: "Inter", sans-serif;
         line-height: 16px;
         font-weight: 500;
@@ -29,13 +29,13 @@ const getButtonStyles = (
         &:focus {
           border: 2px solid rgba(0, 0, 0, 0.3);
         }
-      `;
+      `
     default:
       return css`
-        color: ${disabled ? "rgba(0, 0, 0, 0.3)" : "rgba(0, 0, 0, 0.8)"};
+        color: ${disabled ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.8)'};
         border: ${disabled
-          ? "1px solid rgba(0, 0, 0, 0.3)"
-          : "1px solid rgba(0, 0, 0, 0.8)"};
+          ? '1px solid rgba(0, 0, 0, 0.3)'
+          : '1px solid rgba(0, 0, 0, 0.8)'};
         background-color: #ffffff;
         font-family: "Inter", sans-serif;
         font-weight: 500;
@@ -48,15 +48,15 @@ const getButtonStyles = (
           padding: 4px 15px 4px 15px;
           border: 2px solid #18a0fb;
         }
-      `;
+      `
   }
-};
+}
 
 
 
 const getDestructiveStyles = (variant: ButtonVariants) => {
   switch (variant) {
-    case "primary":
+    case 'primary':
       return css`
         color: #ffffff;
         background-color: #f24822;
@@ -65,7 +65,7 @@ const getDestructiveStyles = (variant: ButtonVariants) => {
         &:focus {
           border: 2px solid rgba(0, 0, 0, 0.3);
         }
-      `;
+      `
     default:
       return css`
         color: #f24822;
@@ -82,9 +82,9 @@ const getDestructiveStyles = (variant: ButtonVariants) => {
           padding: 4px 15px 4px 15px;
           border: 2px solid #f24822;
         }
-      `;
+      `
   }
-};
+}
 
 
 export const Button = styled.button<ButtonProps>`
@@ -96,8 +96,8 @@ export const Button = styled.button<ButtonProps>`
   border: 2px solid transparent;
   border-radius: 6px;
   outline: none;
-  ${props => getButtonStyles(props.variant, props.disabled || false)};
-  ${props =>
+  ${(props) => getButtonStyles(props.variant, props.disabled || false)};
+  ${(props) =>
     props.destructive ? getDestructiveStyles(props.variant) : undefined}
-  opacity: ${props => (props.disabled && props.destructive ? 0.4 : 1)};
-`;
+  opacity: ${(props) => (props.disabled && props.destructive ? 0.4 : 1)};
+`
