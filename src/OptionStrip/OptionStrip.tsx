@@ -1,4 +1,3 @@
-import { JSXElement } from '@babel/types'
 import * as React from 'react'
 import styled from 'styled-components'
 import { Text } from '../Text'
