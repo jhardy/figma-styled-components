@@ -12,7 +12,7 @@ export interface StripOption {
 export interface OptionStripProps {
   options: StripOption[]
   defaultSelected?: number,
-  onChange?: () => void
+  onChange?: React.ReactEventHandler
 }
 
 const OptionStripContainer = styled.div`
@@ -62,7 +62,7 @@ const OptionStripFactory: React.FC<OptionStripProps> = ({ options, defaultSelect
     setOption(event.target.value)
 
     if (onChange) {
-      onChange()
+      onChange(event)
     }
   }
 
