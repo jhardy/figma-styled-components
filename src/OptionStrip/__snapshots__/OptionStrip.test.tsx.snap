@@ -8,11 +8,11 @@ exports[`A default option strip 1`] = `
   font-family: "Inter",sans-serif;
   color: rgba(0,0,0,0.8);
   font-weight: 400;
-  font-size: 12px;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
   line-height: 16px;
 }
 
@@ -123,7 +123,7 @@ exports[`A default option strip 1`] = `
     />
     <span
       className="c2 c3"
-      size="ui12"
+      size="ui11"
     >
       One
     </span>
@@ -140,7 +140,7 @@ exports[`A default option strip 1`] = `
     />
     <span
       className="c2 c3"
-      size="ui12"
+      size="ui11"
     >
       Two
     </span>
