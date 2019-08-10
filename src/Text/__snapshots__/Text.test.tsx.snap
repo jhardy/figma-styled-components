@@ -41,8 +41,7 @@ exports[`Text can be on negative 1`] = `
 
 <span
   className="c0"
-  onNegative={true}
-  size="large"
+  size="ui13"
 >
   Hello
 </span>
@@ -56,17 +55,17 @@ exports[`Text can be resized 1`] = `
   font-family: "Inter",sans-serif;
   color: rgba(0,0,0,0.8);
   font-weight: 400;
-  font-size: 13px;
-  -webkit-letter-spacing: -.0025em;
-  -moz-letter-spacing: -.0025em;
-  -ms-letter-spacing: -.0025em;
-  letter-spacing: -.0025em;
-  line-height: 24px;
+  font-size: 12px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  line-height: 16px;
 }
 
 <span
   className="c0"
-  size="large"
+  size="ui12"
 >
   Hello
 </span>

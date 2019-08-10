@@ -24,16 +24,16 @@ const testIcon = (
 
 storiesOf('Button', module).add('Variants', () => (
   <div>
-    <Text size='xlarge'>Primary</Text>
+    <Text size='ui14'>Primary</Text>
     <br />
-    <Text size='large'>Normal</Text>
+    <Text size='ui13'>Normal</Text>
     <div>
       <Button variant='primary'>Primary</Button>
       <Button variant='primary' disabled={true}>
         Primary
       </Button>
     </div>
-    <Text size='large'>Destructive</Text>
+    <Text size='ui13'>Destructive</Text>
     <div>
       <Button variant='primary' destructive={true}>
         Primary
@@ -43,14 +43,14 @@ storiesOf('Button', module).add('Variants', () => (
       </Button>
     </div>
 
-    <Text size='xlarge'>Secondary</Text>
+    <Text size='ui14'>Secondary</Text>
     <br />
-    <Text size='large'>Normal</Text>
+    <Text size='ui13'>Normal</Text>
     <div>
       <Button>Primary</Button>
       <Button disabled={true}>Primary</Button>
     </div>
-    <Text size='large'>Destructive</Text>
+    <Text size='ui13'>Destructive</Text>
     <div>
       <Button destructive={true}>Primary</Button>
       <Button destructive={true} disabled={true}>
@@ -117,7 +117,7 @@ storiesOf('Text Components', module)
   .add('Text', () => (
     <div className='text-components'>
       <div>
-        <Text size='xlarge'>Positive Application</Text>
+        <Text size='ui14'>Positive Application</Text>
         <div className='text-block'>
           <ul>
             <li>
@@ -133,35 +133,67 @@ storiesOf('Text Components', module)
 
           <ul>
             <li>
-              <Text size='medium'>UI12 Normal</Text>
+              <Text size='ui12'>UI12 Normal</Text>
             </li>
             <li>
-              <Text size='medium' weight='medium'>
+              <Text size='ui12' weight='medium'>
                 UI12 Medium
               </Text>
             </li>
             <li>
-              <Text size='medium' weight='bold'>
+              <Text size='ui12' weight='bold'>
                 UI12 Bold
+              </Text>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <Text size='ui13'>UI13 Normal</Text>
+            </li>
+            <li>
+              <Text size='ui13' weight='medium'>
+                UI13 Medium
+              </Text>
+            </li>
+            <li>
+              <Text size='ui13' weight='bold'>
+                UI13 Bold
+              </Text>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <Text size='ui14'>UI14 Normal</Text>
+            </li>
+            <li>
+              <Text size='ui14' weight='medium'>
+                UI14 Medium
+              </Text>
+            </li>
+            <li>
+              <Text size='ui14' weight='bold'>
+                UI14 Bold
               </Text>
             </li>
           </ul>
         </div>
       </div>
 
-      <Text size='xlarge'>Negative Application</Text>
+      <Text size='ui14'>Negative Application</Text>
       <div className='text-block negative-text'>
         <ul>
           <li>
-            <Text onNegative={true}>UI11 Normal</Text>
+            <Text inverted={true}>UI11 Normal</Text>
           </li>
           <li>
-            <Text onNegative={true} weight='medium'>
+            <Text inverted={true} weight='medium'>
               UI11 Medium
             </Text>
           </li>
           <li>
-            <Text onNegative={true} weight='bold'>
+            <Text inverted={true} weight='bold'>
               UI11 Bold
             </Text>
           </li>
@@ -169,20 +201,60 @@ storiesOf('Text Components', module)
 
         <ul>
           <li>
-            <Text onNegative={true} size='medium'>
+            <Text inverted={true} size='ui12'>
               UI12 Normal
             </Text>
           </li>
           <li>
             {' '}
-            <Text onNegative={true} size='medium' weight='medium'>
+            <Text inverted={true} size='ui12' weight='medium'>
               UI12 Medium
             </Text>
           </li>
           <li>
             {' '}
-            <Text onNegative={true} size='medium' weight='bold'>
+            <Text inverted={true} size='ui12' weight='bold'>
               UI12 Bold
+            </Text>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <Text inverted={true} size='ui13'>
+              UI13 Normal
+            </Text>
+          </li>
+          <li>
+            {' '}
+            <Text inverted={true} size='ui13' weight='medium'>
+              UI13 Medium
+            </Text>
+          </li>
+          <li>
+            {' '}
+            <Text inverted={true} size='ui13' weight='bold'>
+              UI13 Bold
+            </Text>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <Text inverted={true} size='ui14'>
+              UI14 Normal
+            </Text>
+          </li>
+          <li>
+            {' '}
+            <Text inverted={true} size='ui14' weight='medium'>
+              UI14 Medium
+            </Text>
+          </li>
+          <li>
+            {' '}
+            <Text inverted={true} size='ui14' weight='bold'>
+              UI14 Bold
             </Text>
           </li>
         </ul>

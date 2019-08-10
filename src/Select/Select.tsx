@@ -220,7 +220,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
                 return (
                 <SelectItem key={`group-` + item.label} id={item.value || item.label} data-value={item.value} data-label={item.label || item.value} onClick={handleClick}>
                   {selectedOption.value === item.value && hasMadeSelection && <SelectedCheck />}
-                  <Text size='medium' onNegative={true}>
+                  <Text size='ui12' inverted={true}>
                     {item.label}
                   </Text>
                 </SelectItem>)
@@ -235,7 +235,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
               onClick={handleClick}
             >
               {selectedOption.value === option.value && <SelectedCheck />}
-              <Text size='medium' onNegative={true}>
+              <Text size='ui12' inverted={true}>
                 {option.label || option.value}
               </Text>
             </SelectItem>

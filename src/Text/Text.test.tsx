@@ -12,7 +12,7 @@ test('A default Text', () => {
 
 
 test('Text can be resized', () => {
-  const tree = renderer.create(<Text size='large'>Hello</Text>).toJSON()
+  const tree = renderer.create(<Text size='ui12'>Hello</Text>).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
@@ -23,7 +23,7 @@ test('Text can have a different weight', () => {
 
 
 test('Text can be on negative', () => {
-  const tree = renderer.create(<Text size='large' onNegative={true}>Hello</Text>).toJSON()
+  const tree = renderer.create(<Text size='ui13' inverted={true}>Hello</Text>).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
