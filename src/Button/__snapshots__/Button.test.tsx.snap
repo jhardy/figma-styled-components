@@ -3,17 +3,29 @@
 exports[`A default Button 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 30px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 1px 0 1px 0;
-  padding: 5px 16px 5px 16px;
-  border: 2px solid transparent;
+  padding: 6px 16px 5px 16px;
+  border: none;
   border-radius: 6px;
   outline: none;
   color: rgba(0,0,0,0.8);
-  border: 1px solid rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.8);
   background-color: #ffffff;
   font-family: "Inter",sans-serif;
   font-weight: 500;
@@ -28,8 +40,7 @@ exports[`A default Button 1`] = `
 
 .c0:active,
 .c0:focus {
-  padding: 4px 15px 4px 15px;
-  border: 2px solid #18a0fb;
+  box-shadow: inset 0 0 0 2px #18a0fb;
 }
 
 <button
@@ -40,17 +51,29 @@ exports[`A default Button 1`] = `
 exports[`A disabped Button 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 30px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 1px 0 1px 0;
-  padding: 5px 16px 5px 16px;
-  border: 2px solid transparent;
+  padding: 6px 16px 5px 16px;
+  border: none;
   border-radius: 6px;
   outline: none;
   color: rgba(0,0,0,0.3);
-  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.3);
   background-color: #ffffff;
   font-family: "Inter",sans-serif;
   font-weight: 500;
@@ -65,8 +88,7 @@ exports[`A disabped Button 1`] = `
 
 .c0:active,
 .c0:focus {
-  padding: 4px 15px 4px 15px;
-  border: 2px solid #18a0fb;
+  box-shadow: inset 0 0 0 2px #18a0fb;
 }
 
 <button
@@ -78,13 +100,25 @@ exports[`A disabped Button 1`] = `
 exports[`A primary Button 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: inline-block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 30px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 1px 0 1px 0;
-  padding: 5px 16px 5px 16px;
-  border: 2px solid transparent;
+  padding: 6px 16px 5px 16px;
+  border: none;
   border-radius: 6px;
   outline: none;
   color: #ffffff;
@@ -103,7 +137,7 @@ exports[`A primary Button 1`] = `
 
 .c0:active,
 .c0:focus {
-  border: 2px solid rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,0.3);
 }
 
 <button

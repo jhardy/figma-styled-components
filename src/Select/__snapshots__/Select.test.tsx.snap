@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`A Select with grouped options 1`] = `
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ exports[`A Select with grouped options 1`] = `
   line-height: 16px;
 }
 
-.c6 {
+.c10 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -31,7 +31,7 @@ exports[`A Select with grouped options 1`] = `
   line-height: 16px;
 }
 
-.c5 {
+.c9 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -44,24 +44,25 @@ exports[`A Select with grouped options 1`] = `
   width: 100%;
   height: 24px;
   padding: 0 16px 0 32px;
+  margin: 0;
   list-style-type: none;
   text-align: left;
   cursor: pointer;
   position: relative;
 }
 
-.c5 svg {
+.c9 svg {
   position: absolute;
   left: 6px;
   top: 4px;
   pointer-events: none;
 }
 
-.c5:hover {
+.c9:hover {
   background-color: #18a0fb;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,14 +89,15 @@ exports[`A Select with grouped options 1`] = `
   -moz-letter-spacing: 0.005em;
   -ms-letter-spacing: 0.005em;
   letter-spacing: 0.005em;
+  position: relative;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   margin-left: 8px;
   color: rgba(0,0,0,0.2);
 }
 
-.c1:hover {
+.c2:hover {
   border: 1px solid rgba(0,0,0,0.1);
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -103,11 +105,11 @@ exports[`A Select with grouped options 1`] = `
   justify-content: space-between;
 }
 
-.c1:hover .c3 {
+.c2:hover .c4 {
   color: rgba(0,0,0,1);
 }
 
-.c1:focus {
+.c2:focus {
   padding: 0 7px 0 7px;
   border: 2px solid #18a0fb;
   outline: none;
@@ -117,8 +119,41 @@ exports[`A Select with grouped options 1`] = `
   justify-content: space-between;
 }
 
-.c1:focus .c3 {
+.c2:focus .c4 {
   color: rgba(0,0,0,1);
+}
+
+.c6 {
+  position: absolute;
+  z-index: 2;
+  top: 31px;
+  right: 0;
+  left: 0;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  list-style-type: none;
+  opacity: 0;
+  box-shadow: 0 5px 17px rgba(0,0,0,0.2),0 2px 7px rgba(0,0,0,0.15);
+  background-color: #222222;
+  display: none;
+}
+
+.c6.show-options {
+  opacity: 1;
+  display: block;
+}
+
+.c1 {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0);
 }
 
 .c0 {
@@ -144,42 +179,75 @@ exports[`A Select with grouped options 1`] = `
   display: none;
 }
 
-.c0 ul {
-  position: absolute;
-  z-index: 2;
-  top: 31px;
-  right: 0;
-  left: 0;
-  display: block;
-  overflow: auto;
-  width: 100%;
+.c0 .c5 {
   margin: 0;
   padding: 8px 0 8px 0;
-  list-style-type: none;
-  opacity: 0;
-  box-shadow: 0 5px 17px rgba(0,0,0,0.2),0 2px 7px rgba(0,0,0,0.15);
-  background-color: #222222;
-  display: none;
 }
 
-.c0 ul.show-options {
-  opacity: 1;
-  display: block;
+.c0 .c8 {
+  margin: 0;
 }
 
-.c0 .c4:not(:first-child) {
+.c0 .c7:not(:first-child) {
   padding: 8px 0 0 0;
   margin-top: 8px;
   border-top: solid 1px rgba(255,255,255,0.2);
 }
 
-.c0 .c4:last-child {
+.c0 .c7:last-child {
   padding-bottom: 0;
 }
 
 <div
   className="c0"
+  options={
+    Array [
+      Object {
+        "group": Array [
+          Object {
+            "label": "Item 1",
+            "value": "1",
+          },
+          Object {
+            "label": "Item 2",
+            "value": "2",
+          },
+        ],
+        "label": "Group 1",
+      },
+      Object {
+        "group": Array [
+          Object {
+            "label": "Item 3",
+            "value": "3",
+          },
+          Object {
+            "label": "Item 4",
+            "value": "4",
+          },
+        ],
+        "label": "Group 2",
+      },
+      Object {
+        "group": Array [
+          Object {
+            "label": "Item 5",
+            "value": "5",
+          },
+          Object {
+            "label": "Item 6",
+            "value": "6",
+          },
+        ],
+        "label": "Group 3",
+      },
+    ]
+  }
 >
+  <div
+    className="c1"
+    onClick={[Function]}
+  />
   <select
     defaultValue="1"
   >
@@ -227,16 +295,16 @@ exports[`A Select with grouped options 1`] = `
     </optgroup>
   </select>
   <button
-    className="c1"
+    className="c2"
     onClick={[Function]}
   >
     <span
-      className="c2"
+      className="c3"
     >
       Item 1
     </span>
     <div
-      className="c3 "
+      className="c4 "
     >
       <svg
         fill="none"
@@ -254,113 +322,100 @@ exports[`A Select with grouped options 1`] = `
       </svg>
     </div>
   </button>
-  <ul>
+  <ul
+    className="c5 c6"
+  >
     <div
-      className="c4 "
+      className="c7 "
     >
       <li
-        className="c5"
+        className="c8 c9"
         data-label="Item 1"
         data-value="1"
         id="1"
         onClick={[Function]}
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clipRule="evenodd"
-            d="M13.2069 5.20724L7.70688 10.7072L6.99977 11.4144L6.29267 10.7072L3.29267 7.70724L4.70688 6.29303L6.99977 8.58592L11.7927 3.79303L13.2069 5.20724Z"
-            fill="white"
-            fillOpacity="1"
-            fillRule="evenodd"
-          />
-        </svg>
         <span
-          className="c6"
-          size="ui12"
+          className="c10"
+          size="medium"
         >
           Item 1
         </span>
       </li>
       <li
-        className="c5"
+        className="c8 c9"
         data-label="Item 2"
         data-value="2"
         id="2"
         onClick={[Function]}
       >
         <span
-          className="c6"
-          size="ui12"
+          className="c10"
+          size="medium"
         >
           Item 2
         </span>
       </li>
     </div>
     <div
-      className="c4 "
+      className="c7 "
     >
       <li
-        className="c5"
+        className="c8 c9"
         data-label="Item 3"
         data-value="3"
         id="3"
         onClick={[Function]}
       >
         <span
-          className="c6"
-          size="ui12"
+          className="c10"
+          size="medium"
         >
           Item 3
         </span>
       </li>
       <li
-        className="c5"
+        className="c8 c9"
         data-label="Item 4"
         data-value="4"
         id="4"
         onClick={[Function]}
       >
         <span
-          className="c6"
-          size="ui12"
+          className="c10"
+          size="medium"
         >
           Item 4
         </span>
       </li>
     </div>
     <div
-      className="c4 "
+      className="c7 "
     >
       <li
-        className="c5"
+        className="c8 c9"
         data-label="Item 5"
         data-value="5"
         id="5"
         onClick={[Function]}
       >
         <span
-          className="c6"
-          size="ui12"
+          className="c10"
+          size="medium"
         >
           Item 5
         </span>
       </li>
       <li
-        className="c5"
+        className="c8 c9"
         data-label="Item 6"
         data-value="6"
         id="6"
         onClick={[Function]}
       >
         <span
-          className="c6"
-          size="ui12"
+          className="c10"
+          size="medium"
         >
           Item 6
         </span>
@@ -371,7 +426,7 @@ exports[`A Select with grouped options 1`] = `
 `;
 
 exports[`A default Select 1`] = `
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -386,7 +441,7 @@ exports[`A default Select 1`] = `
   line-height: 16px;
 }
 
-.c5 {
+.c9 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -401,7 +456,7 @@ exports[`A default Select 1`] = `
   line-height: 16px;
 }
 
-.c4 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -414,24 +469,25 @@ exports[`A default Select 1`] = `
   width: 100%;
   height: 24px;
   padding: 0 16px 0 32px;
+  margin: 0;
   list-style-type: none;
   text-align: left;
   cursor: pointer;
   position: relative;
 }
 
-.c4 svg {
+.c8 svg {
   position: absolute;
   left: 6px;
   top: 4px;
   pointer-events: none;
 }
 
-.c4:hover {
+.c8:hover {
   background-color: #18a0fb;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -458,14 +514,15 @@ exports[`A default Select 1`] = `
   -moz-letter-spacing: 0.005em;
   -ms-letter-spacing: 0.005em;
   letter-spacing: 0.005em;
+  position: relative;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   margin-left: 8px;
   color: rgba(0,0,0,0.2);
 }
 
-.c1:hover {
+.c2:hover {
   border: 1px solid rgba(0,0,0,0.1);
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -473,11 +530,11 @@ exports[`A default Select 1`] = `
   justify-content: space-between;
 }
 
-.c1:hover .c3 {
+.c2:hover .c4 {
   color: rgba(0,0,0,1);
 }
 
-.c1:focus {
+.c2:focus {
   padding: 0 7px 0 7px;
   border: 2px solid #18a0fb;
   outline: none;
@@ -487,8 +544,41 @@ exports[`A default Select 1`] = `
   justify-content: space-between;
 }
 
-.c1:focus .c3 {
+.c2:focus .c4 {
   color: rgba(0,0,0,1);
+}
+
+.c6 {
+  position: absolute;
+  z-index: 2;
+  top: 31px;
+  right: 0;
+  left: 0;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  list-style-type: none;
+  opacity: 0;
+  box-shadow: 0 5px 17px rgba(0,0,0,0.2),0 2px 7px rgba(0,0,0,0.15);
+  background-color: #222222;
+  display: none;
+}
+
+.c6.show-options {
+  opacity: 1;
+  display: block;
+}
+
+.c1 {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0);
 }
 
 .c0 {
@@ -514,42 +604,48 @@ exports[`A default Select 1`] = `
   display: none;
 }
 
-.c0 ul {
-  position: absolute;
-  z-index: 2;
-  top: 31px;
-  right: 0;
-  left: 0;
-  display: block;
-  overflow: auto;
-  width: 100%;
+.c0 .c5 {
   margin: 0;
   padding: 8px 0 8px 0;
-  list-style-type: none;
-  opacity: 0;
-  box-shadow: 0 5px 17px rgba(0,0,0,0.2),0 2px 7px rgba(0,0,0,0.15);
-  background-color: #222222;
-  display: none;
 }
 
-.c0 ul.show-options {
-  opacity: 1;
-  display: block;
+.c0 .c7 {
+  margin: 0;
 }
 
-.c0 .c6:not(:first-child) {
+.c0 .c10:not(:first-child) {
   padding: 8px 0 0 0;
   margin-top: 8px;
   border-top: solid 1px rgba(255,255,255,0.2);
 }
 
-.c0 .c6:last-child {
+.c0 .c10:last-child {
   padding-bottom: 0;
 }
 
 <div
   className="c0"
+  options={
+    Array [
+      Object {
+        "label": "Option One",
+        "value": "one",
+      },
+      Object {
+        "label": "Option Two",
+        "value": "two",
+      },
+      Object {
+        "label": "Option Three",
+        "value": "three",
+      },
+    ]
+  }
 >
+  <div
+    className="c1"
+    onClick={[Function]}
+  />
   <select
     defaultValue="one"
   >
@@ -570,16 +666,16 @@ exports[`A default Select 1`] = `
     </option>
   </select>
   <button
-    className="c1"
+    className="c2"
     onClick={[Function]}
   >
     <span
-      className="c2"
+      className="c3"
     >
       Option One
     </span>
     <div
-      className="c3 "
+      className="c4 "
     >
       <svg
         fill="none"
@@ -597,9 +693,11 @@ exports[`A default Select 1`] = `
       </svg>
     </div>
   </button>
-  <ul>
+  <ul
+    className="c5 c6"
+  >
     <li
-      className="c4"
+      className="c7 c8"
       data-label="Option One"
       data-value="one"
       id="one"
@@ -621,36 +719,36 @@ exports[`A default Select 1`] = `
         />
       </svg>
       <span
-        className="c5"
-        size="ui12"
+        className="c9"
+        size="medium"
       >
         Option One
       </span>
     </li>
     <li
-      className="c4"
+      className="c7 c8"
       data-label="Option Two"
       data-value="two"
       id="two"
       onClick={[Function]}
     >
       <span
-        className="c5"
-        size="ui12"
+        className="c9"
+        size="medium"
       >
         Option Two
       </span>
     </li>
     <li
-      className="c4"
+      className="c7 c8"
       data-label="Option Three"
       data-value="three"
       id="three"
       onClick={[Function]}
     >
       <span
-        className="c5"
-        size="ui12"
+        className="c9"
+        size="medium"
       >
         Option Three
       </span>
