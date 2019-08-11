@@ -46,6 +46,7 @@ const SelectItem = styled.li<{ selected?: boolean }>`
   width: 100%;
   height: 24px;
   padding: 0 16px 0 32px;
+  margin: 0;
   list-style-type: none;
   text-align: left;
   cursor: pointer;
@@ -122,6 +123,30 @@ const SelectTrigger = styled.button`
   }
 `
 
+const SelectOptions = styled.ul`
+  position: absolute;
+  z-index: 2;
+  top: 31px;
+  right: 0;
+  left: 0;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  list-style-type: none;
+  opacity: 0;
+  box-shadow: 0 5px 17px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.15);
+  background-color: #222222;
+  display: none;
+
+  &.show-options {
+    opacity: 1;
+    display: block;
+  }
+`
+
+
 export const SelectFactory: React.FC<SelectProps> = ({
   options,
   onChange,
@@ -129,7 +154,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
   noDefault,
   ...props
 }) => {
-  const selectInput = React.useRef<HTMLSelectElement>()
+  const selectInput = React.useRef(null)
 
   const getInitalValue = (optionItems: SelectOptions[]) => {
     if (optionItems[0].group) {
@@ -190,7 +215,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
     <div {...props} ref={wrapperRef}>
 
       <select
-        ref={selectInput as any/* this is :(, fix soon!*/}
+        ref={selectInput}
         onChange={onChange}
         defaultValue={placeholder ? '' : selectedOption.value}
       >
@@ -212,7 +237,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
         <Text>{placeholder && !hasMadeSelection ? placeholder : selectedOption.label}</Text>
         <SelectChevron />
       </SelectTrigger>
-      <ul className={showOptions ? 'show-options' : undefined}>
+      <SelectOptions className={showOptions ? 'show-options' : undefined}>
         {options.map((option, i) => {
           return option.group ?
             <SelectGroup key={`group-parent-` + i}>
@@ -220,7 +245,7 @@ export const SelectFactory: React.FC<SelectProps> = ({
                 return (
                 <SelectItem key={`group-` + item.label} id={item.value || item.label} data-value={item.value} data-label={item.label || item.value} onClick={handleClick}>
                   {selectedOption.value === item.value && hasMadeSelection && <SelectedCheck />}
-                  <Text size='ui12' inverted={true}>
+                  <Text size='medium' inverted={true}>
                     {item.label}
                   </Text>
                 </SelectItem>)
@@ -235,13 +260,13 @@ export const SelectFactory: React.FC<SelectProps> = ({
               onClick={handleClick}
             >
               {selectedOption.value === option.value && <SelectedCheck />}
-              <Text size='ui12' inverted={true}>
+              <Text size='medium' inverted={true}>
                 {option.label || option.value}
               </Text>
             </SelectItem>
 
         })}
-      </ul>
+      </SelectOptions>
     </div>
   )
 }
@@ -258,27 +283,13 @@ export const Select = styled(SelectFactory)`
     display: none;
   }
 
-  ul {
-    position: absolute;
-    z-index: 2;
-    top: 31px;
-    right: 0;
-    left: 0;
-    display: block;
-    overflow: auto;
-    width: 100%;
+  ${SelectOptions}{
     margin: 0;
     padding: 8px 0 8px 0;
-    list-style-type: none;
-    opacity: 0;
-    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.15);
-    background-color: #222222;
-    display: none;
+  }
 
-    &.show-options {
-      opacity: 1;
-      display: block;
-    }
+  ${SelectItem} {
+    margin: 0;
   }
 
   ${SelectGroup}:not(:first-child) {

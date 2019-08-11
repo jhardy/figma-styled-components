@@ -1,0 +1,143 @@
+import { Button } from "./Button";
+import { Text } from "../Text";
+import { OptionButton } from "../OptionButton";
+import { IconButton } from "../IconButton";
+import { Story, Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="MDX|Buttons" component={Button} />
+
+# Buttons
+
+<Story name="Buttons">
+  <div>
+    <div class="component-box">
+      <Text size="xlarge" weight="bold">
+        Primary
+      </Text>
+      <br />
+      <Text size="large">Normal</Text>
+      <div>
+        <Button variant="primary">Label</Button>
+        <Button variant="primary" disabled={true}>
+          Label
+        </Button>
+      </div>
+      <Text size="large">Destructive</Text>
+      <div>
+        <Button variant="primary" destructive>
+          Label
+        </Button>
+        <Button variant="primary" disabled={true} destructive>
+          Label
+        </Button>
+      </div>
+    </div>
+    <div class="component-box">
+      <Text size="xlarge" weight="bold">
+        Secondary
+      </Text>
+      <br />
+      <Text size="large">Normal</Text>
+      <div>
+        <Button>Label</Button>
+        <Button disabled={true}>Label</Button>
+      </div>
+      <Text size="large">Destructive</Text>
+      <div>
+        <Button destructive>Label</Button>
+        <Button disabled={true} destructive>
+          Label
+        </Button>
+      </div>
+    </div>
+  </div>
+</Story>
+
+<div class="props-table">
+
+## Props
+
+| Prop Name   | Type                   | Default     | Required | Description                           |
+| :---------- | :--------------------- | :---------- | :------: | :------------------------------------ |
+| variant     | <code>"primary" &#124; "secondary"</code> | <code>"secondary"</code> |    -     | Button's appearance                   |
+| destructive | boolean                | false       |    -     | If button's action is destructive     |
+| disabled    | boolean                | false       |    -     | If button is disabled                 |
+| onClick     | function               | -           |    -     | Callback for Button's `onClick` event |
+
+</div>
+
+# Icon Button
+
+<Story name="IconButton">
+  <div class="component-box">
+    <IconButton
+      icon={
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clip-rule="evenodd"
+            d="M11 4.5V6H12V4.5C12 2.567 10.433 1 8.5 1C6.567 1 5 2.567 5 4.5V6H6V4.5C6 3.11929 7.11929 2 8.5 2C9.88071 2 11 3.11929 11 4.5ZM11 10H12V11.5C12 13.433 10.433 15 8.5 15C6.567 15 5 13.433 5 11.5V10H6V11.5C6 12.8807 7.11929 14 8.5 14C9.88071 14 11 12.8807 11 11.5V10ZM8 5V11H9V5H8Z"
+            fill="currentColor"
+          />
+        </svg>
+      }
+    />
+  </div>
+</Story>
+
+<div class="props-table">
+
+## Props
+
+| Prop Name | Type                  | Default | Required | Description                           |
+| :-------- | :-------------------- | :-----: | :------: | :------------------------------------ |
+| icon      | <code>JSX.Element &#124; string</code> |    -    |   yes    | Icon for the button                   |
+| on        | boolean               |  false  |    -     | If the button is toggled on           |
+| disabled  | boolean               |  false  |    -     | If the button is disabled             |
+| onClick   | function              |    -    |    -     | Callback for button's `onClick` event |
+
+</div>
+
+# OptionButton
+
+<Story name="OptionButton">
+  <div class="component-box">
+    <OptionButton
+      icon={
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clip-rule="evenodd"
+            d="M11 4.5V6H12V4.5C12 2.567 10.433 1 8.5 1C6.567 1 5 2.567 5 4.5V6H6V4.5C6 3.11929 7.11929 2 8.5 2C9.88071 2 11 3.11929 11 4.5ZM11 10H12V11.5C12 13.433 10.433 15 8.5 15C6.567 15 5 13.433 5 11.5V10H6V11.5C6 12.8807 7.11929 14 8.5 14C9.88071 14 11 12.8807 11 11.5V10ZM8 5V11H9V5H8Z"
+            fill="currentColor"
+          />
+        </svg>
+      }
+    />
+  </div>
+</Story>
+
+<div class="props-table">
+
+## Props
+
+| Prop Name | Type                  | Default | Required | Description                           |
+| :-------- | :-------------------- | :-----: | :------: | :------------------------------------ |
+| icon      | <code>JSX.Element &#124; string</code> |    -    |   yes    | Icon for the button                   |
+| on        | boolean               |  false  |    -     | If the button is toggled on           |
+| disabled  | boolean               |  false  |    -     | If the button is disabled             |
+| onClick   | function              |    -    |    -     | Callback for button's `onClick` event |
+
+</div>
