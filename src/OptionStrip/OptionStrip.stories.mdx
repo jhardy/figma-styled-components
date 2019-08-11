@@ -1,0 +1,29 @@
+import { OptionStrip } from "./OptionStrip";
+import { Story, Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="MDX|OptionStrip" component={OptionStrip} />
+
+# OptionStrip
+
+<Story name="OptionStrip">
+  <div class="component-box">
+    <OptionStrip
+      options={[
+        { value: "1", label: "x" },
+        { value: "2", label: "y" },
+        { value: "3", label: "z" }
+      ]}
+    />
+  </div>
+</Story>
+
+<div class="props-table">
+
+## Props
+
+| Prop Name | Type                                                                  | Default | Required | Description                                 |
+| :-------- | :-------------------------------------------------------------------- | :-----: | :------: | :------------------------------------------ |
+| options   | <code>Array<{value: string, label: JSX.Element &#124; string}></code> |    -    |   yes    | Array of options for the strip                |
+| onChange  | function                                                              |    -    |    -     | Callback for when an options has changed |
+
+</div>

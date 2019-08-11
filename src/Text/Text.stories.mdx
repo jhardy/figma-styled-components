@@ -1,0 +1,171 @@
+import { SectionTitle } from "../SectionTitle";
+import { Text } from "./Text";
+import { Label } from "../Label";
+import { Story, Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="MDX|Typography" component={Text} />
+
+# Typography Components
+
+## Text
+
+<Story name="Text">
+  <div class="component-box">
+    <div className="text-components">
+      <div class="text-wrapper">
+        <Text size="xlarge">Positive Application</Text>
+        <div className="text-block">
+          <ul>
+            <li>
+              <Text>UI11 Normal</Text>
+            </li>
+            <li>
+              <Text weight="medium">UI11 Medium</Text>
+            </li>
+            <li>
+              <Text weight="bold">UI11 Bold</Text>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Text size="medium">UI12 Normal</Text>
+            </li>
+            <li>
+              <Text size="medium" weight="medium">
+                UI12 Medium
+              </Text>
+            </li>
+            <li>
+              <Text size="medium" weight="bold">
+                UI12 Bold
+              </Text>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Text size="large">UI13 Normal</Text>
+            </li>
+            <li>
+              <Text size="large" weight="medium">
+                UI13 Medium
+              </Text>
+            </li>
+            <li>
+              <Text size="large" weight="bold">
+                UI13 Bold
+              </Text>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Text size="xlarge">UI14 Normal</Text>
+            </li>
+            <li>
+              <Text size="xlarge" weight="medium">
+                UI14 Medium
+              </Text>
+            </li>
+            <li>
+              <Text size="xlarge" weight="bold">
+                UI14 Bold
+              </Text>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-wrapper">
+        <Text size="xlarge">Negative Application</Text>
+        <div className="text-block negative-text">
+          <ul>
+            <li>
+              <Text inverted={true}>UI11 Normal</Text>
+            </li>
+            <li>
+              <Text inverted={true} weight="medium">
+                UI11 Medium
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} weight="bold">
+                UI11 Bold
+              </Text>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Text inverted={true} size="medium">
+                UI12 Normal
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} size="medium" weight="medium">
+                UI12 Medium
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} size="medium" weight="bold">
+                UI12 Bold
+              </Text>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Text inverted={true} size="large">
+                UI13 Normal
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} size="large" weight="medium">
+                UI13 Medium
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} size="large" weight="bold">
+                UI13 Bold
+              </Text>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Text inverted={true} size="xlarge">
+                UI14 Normal
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} size="xlarge" weight="medium">
+                UI14 Medium
+              </Text>
+            </li>
+            <li>
+              <Text inverted={true} size="xlarge" weight="bold">
+                UI14 Bold
+              </Text>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</Story>
+
+| Prop Name | Type                                 | Default  | Required | Description                    |
+| :-------- | :----------------------------------- | :------: | :------: | :----------------------------- |
+| size      | "small", "medium", "large", "xlarge" | "small"  |    -     | Text's font size               |
+| weigth    | "normal", "medium", "bold"           | "normal" |    -     | Text's weight                  |
+| inverted  | boolean                              |  false   |    -     | If text is on inverted surface |
+
+## Section Title
+
+<Story name="SectionTitle">
+  <div class="component-box">
+    <SectionTitle>I am a Section Title</SectionTitle>
+  </div>
+</Story>
+
+## Label
+
+<Story name="Label">
+  <div class="component-box">
+    <Label>I am a label</Label>
+  </div>
+</Story>

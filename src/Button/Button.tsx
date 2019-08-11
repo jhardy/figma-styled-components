@@ -27,15 +27,15 @@ const getButtonStyles = (
 
         &:active,
         &:focus {
-          border: 2px solid rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
         }
       `
     default:
       return css`
         color: ${disabled ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.8)'};
-        border: ${disabled
-          ? '1px solid rgba(0, 0, 0, 0.3)'
-          : '1px solid rgba(0, 0, 0, 0.8)'};
+        box-shadow: ${disabled
+          ? 'inset 0 0 0 1px rgba(0, 0, 0, 0.3)'
+          : 'inset 0 0 0 1px rgba(0, 0, 0, 0.8)'};
         background-color: #ffffff;
         font-family: "Inter", sans-serif;
         font-weight: 500;
@@ -45,8 +45,8 @@ const getButtonStyles = (
 
         &:active,
         &:focus {
-          padding: 4px 15px 4px 15px;
-          border: 2px solid #18a0fb;
+
+          box-shadow: inset 0 0 0 2px #18a0fb;
         }
       `
   }
@@ -63,13 +63,13 @@ const getDestructiveStyles = (variant: ButtonVariants) => {
 
         &:active,
         &:focus {
-          border: 2px solid rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
         }
       `
     default:
       return css`
         color: #f24822;
-        border: 1px solid #f24822;
+        box-shadow: inset 0 0 0 1px #f24822;
         background-color: #ffffff;
         font-family: "Inter", sans-serif;
         font-weight: 500;
@@ -79,8 +79,7 @@ const getDestructiveStyles = (variant: ButtonVariants) => {
 
         &:active,
         &:focus {
-          padding: 4px 15px 4px 15px;
-          border: 2px solid #f24822;
+          box-shadow: inset 0 0 0 2px #f24822;
         }
       `
   }
@@ -89,11 +88,14 @@ const getDestructiveStyles = (variant: ButtonVariants) => {
 
 export const Button = styled.button<ButtonProps>`
   box-sizing: border-box;
- display: inline-block;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 30px;
   flex-shrink: 0;
   margin: 1px 0 1px 0;
-  padding: 5px 16px 5px 16px;
-  border: 2px solid transparent;
+  padding: 6px 16px 5px 16px;
+  border: none;
   border-radius: 6px;
   outline: none;
   ${(props) => getButtonStyles(props.variant, props.disabled || false)};

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export type TextSizes = 'ui11' | 'ui12' | 'ui13' | 'ui14'
+export type TextSizes = 'small' | 'medium' | 'large' | 'xlarge'
 export type TextWeights = 'normal' | 'medium' | 'bold'
 
 export interface TextProps {
@@ -10,23 +10,23 @@ export interface TextProps {
 }
    // tslint:disable:object-literal-sort-keys
 const textAttributes = {
-  ui11: {
+  small: {
     fontSize: `11px`,
     lineHeight: `16px`,
 
     letterSpacing: { positive: `0.005em`, negative: `.01em` }
   },
-  ui12: {
+  medium: {
     fontSize: `12px`,
     lineHeight: `16px`,
     letterSpacing: { positive: `0`, negative: `.005em;` }
   },
-  ui13: {
+  large: {
     fontSize: `13px`,
     lineHeight: `24px`,
     letterSpacing: { positive: `-.0025em`, negative: `.0025em` }
   },
-  ui14: {
+  xlarge: {
     fontSize: `14px`,
     lineHeight: `24px`,
     letterSpacing: { positive: `-.001em`, negative: `-.001em` }
@@ -45,7 +45,7 @@ const getTextWeight = (weight: TextWeights) => {
 }
 
 const getTextStyles = (
-  size: TextSizes = 'ui11',
+  size: TextSizes = 'small',
   weight: TextWeights = 'normal',
   onNegative: boolean = false
 ) => {

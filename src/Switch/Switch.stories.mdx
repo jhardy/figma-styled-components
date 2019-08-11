@@ -1,0 +1,24 @@
+import { Switch } from "./Switch";
+import { Story, Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="MDX|Switch" component={Switch} />
+
+# Switch
+
+<Story name="Switch">
+  <div class="component-box">
+    <Switch label="I am a Switch click me" />
+  </div>
+</Story>
+
+<div class="props-table">
+
+## Props
+
+| Prop Name | Type     | Default | Required | Description                              |
+| :-------- | :------- | :-----: | :------: | :----------------------------------------|
+| label     | string   |    -    |   yes    | The Switch's label                     |
+| checked   | boolean  |  false  |    -     | If the Switch is checked or not        |
+| onChange  | function |    -    |    -     | Callback for Switch's `onChange` event |
+
+</div>

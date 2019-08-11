@@ -41,7 +41,7 @@ exports[`Text can be on negative 1`] = `
 
 <span
   className="c0"
-  size="ui13"
+  size="large"
 >
   Hello
 </span>
@@ -65,7 +65,7 @@ exports[`Text can be resized 1`] = `
 
 <span
   className="c0"
-  size="ui12"
+  size="medium"
 >
   Hello
 </span>
