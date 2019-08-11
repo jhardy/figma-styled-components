@@ -9,9 +9,40 @@ import { Story, Meta } from "@storybook/addon-docs/blocks";
   <div class="component-box">
     <Select
       options={[
-        { value: "1", label: "x" },
-        { value: "2", label: "y" },
-        { value: "3", label: "z" }
+        { value: "1", label: "One" },
+        { value: "2", label: "Two" },
+        { value: "3", label: "Three" }
+      ]}
+    />
+  </div>
+</Story>
+
+<Story name="Select with groups">
+  <div class="component-box">
+    <Select
+      placeholder="Select an option"
+      options={[
+        {
+          label: "Group 1",
+          group: [
+            { label: "Item 1", value: "1" },
+            { label: "Item 2", value: "2" }
+          ]
+        },
+        {
+          label: "Group 2",
+          group: [
+            { label: "Item 3", value: "3" },
+            { label: "Item 4", value: "4" }
+          ]
+        },
+        {
+          label: "Group 3",
+          group: [
+            { label: "Item 5", value: "5" },
+            { label: "Item 6", value: "6" }
+          ]
+        }
       ]}
     />
   </div>

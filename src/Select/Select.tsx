@@ -97,6 +97,7 @@ const SelectTrigger = styled.button`
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.005em;
+  position: relative;
 
   ${SelectChevron} {
     margin-left: 8px;
@@ -146,78 +147,42 @@ const SelectOptions = styled.ul`
   }
 `
 
+const SelectOverlay = styled.div<{show: boolean}>`
+  display: ${ (props) => props.show ? 'block' : 'none'};
+  position: fixed;
+  width: 100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0);
+`
 
-export const SelectFactory: React.FC<SelectProps> = ({
-  options,
-  onChange,
-  placeholder,
-  noDefault,
-  ...props
-}) => {
-  const selectInput = React.useRef(null)
 
-  const getInitalValue = (optionItems: SelectOptions[]) => {
-    if (optionItems[0].group) {
-      return optionItems[0].group[0].label ? { value: optionItems[0].group[0].value, label: optionItems[0].group[0].label } : { value: optionItems[0].group[0].value, label: optionItems[0].group[0].value }
-    } else {
-      return optionItems[0].label ? { value: optionItems[0].value, label: optionItems[0].label } : { value: optionItems[0].value, label: optionItems[0].value }
+export class SelectFactory extends React.Component<SelectProps, {selectedOption: {value: string | undefined, label: string | undefined}, madeSelection: boolean, showOptions: boolean} > {
+
+  private figmaSelect = React.createRef()
+
+  constructor (props: SelectProps) {
+    super(props)
+    this.state = {
+      madeSelection: false,
+      selectedOption: this.getInialOption(props.options),
+      showOptions: false
     }
 
+    this.toggleSelect = this.toggleSelect.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  const [selectedOption, setOption] = React.useState(getInitalValue(options))
-  const [hasMadeSelection, setHasMadeSelection] = React.useState(placeholder ? false : true)
-  const [showOptions, setOptionsVisiblity] = React.useState(false)
-
-  const handleClick = (event: React.MouseEvent) => {
-    setHasMadeSelection(true)
-    // const ensureLabel = label === '' ? value : label
-    const target = event.currentTarget
-    // console.log(target, target.getAttribute('data-value'))
-    const value = target.getAttribute('data-value') || ''
-    const label = target.getAttribute('data-label') || ''
-
-    setOption({ value, label })
-    setOptionsVisiblity(false)
-  }
-
-
-  const wrapperRef = React.useRef(null)
-
-  const toggleSelect = (e: any) => {
-    setOptionsVisiblity(!showOptions)
-
-  }
-
-  function useOutsideAlerter (ref: any) {
-
-    function handleClickOutside (event: any) {
-      if (ref.current && !ref.current.contains(event.target)) {
-
-        toggleSelect(event)
-      }
-    }
-
-    React.useEffect(() => {
-      // Bind the event listener
-      document.addEventListener('mousedown', handleClickOutside)
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener('mousedown', handleClickOutside)
-      }
-    })
-  }
-
-  useOutsideAlerter(wrapperRef)
-
-
-  return (
-    <div {...props} ref={wrapperRef}>
-
+  public render () {
+    const { placeholder, options, onChange, noDefault } = this.props
+    return(
+      <div {...this.props} >
+      <SelectOverlay show={this.state.showOptions ? true : false} onClick={this.toggleSelect} />
       <select
-        ref={selectInput}
+        ref={this.figmaSelect as any}
         onChange={onChange}
-        defaultValue={placeholder ? '' : selectedOption.value}
+        defaultValue={placeholder ? '' : this.state.selectedOption.value}
       >
         {noDefault && <option />}
         {options.map((option) => {
@@ -233,18 +198,18 @@ export const SelectFactory: React.FC<SelectProps> = ({
             </option>
         })}
       </select>
-      <SelectTrigger onClick={toggleSelect}>
-        <Text>{placeholder && !hasMadeSelection ? placeholder : selectedOption.label}</Text>
+      <SelectTrigger onClick={this.toggleSelect}>
+        <Text>{placeholder && !this.state.madeSelection ? placeholder : this.state.selectedOption.label}</Text>
         <SelectChevron />
       </SelectTrigger>
-      <SelectOptions className={showOptions ? 'show-options' : undefined}>
+      <SelectOptions className={this.state.showOptions ? 'show-options' : undefined}>
         {options.map((option, i) => {
           return option.group ?
             <SelectGroup key={`group-parent-` + i}>
               {option.group.map((item) => {
                 return (
-                <SelectItem key={`group-` + item.label} id={item.value || item.label} data-value={item.value} data-label={item.label || item.value} onClick={handleClick}>
-                  {selectedOption.value === item.value && hasMadeSelection && <SelectedCheck />}
+                <SelectItem key={`group-` + item.label} id={item.value || item.label} data-value={item.value} data-label={item.label || item.value} onClick={this.handleClick}>
+                  {this.state.selectedOption.value === item.value && this.state.madeSelection && <SelectedCheck />}
                   <Text size='medium' inverted={true}>
                     {item.label}
                   </Text>
@@ -257,9 +222,9 @@ export const SelectFactory: React.FC<SelectProps> = ({
               id={option.value}
               data-value={option.value}
               data-label={option.label || option.value}
-              onClick={handleClick}
+              onClick={this.handleClick}
             >
-              {selectedOption.value === option.value && <SelectedCheck />}
+              {this.state.selectedOption.value === option.value && <SelectedCheck />}
               <Text size='medium' inverted={true}>
                 {option.label || option.value}
               </Text>
@@ -268,7 +233,35 @@ export const SelectFactory: React.FC<SelectProps> = ({
         })}
       </SelectOptions>
     </div>
-  )
+    )
+  }
+
+
+  private handleClick (event: React.MouseEvent) {
+
+    const target = event.currentTarget
+
+    const value = target.getAttribute('data-value') || ''
+    const label = target.getAttribute('data-label') || ''
+
+    this.setState({
+      madeSelection: true,
+      selectedOption: { value, label },
+      showOptions: false
+    })
+  }
+
+  private toggleSelect (e: any) {
+    this.setState({ showOptions: !this.state.showOptions })
+  }
+
+  private getInialOption (optionItems: SelectOptions[]) {
+    if (optionItems[0].group) {
+      return optionItems[0].group[0].label ? { value: optionItems[0].group[0].value, label: optionItems[0].group[0].label } : { value: optionItems[0].group[0].value, label: optionItems[0].group[0].value }
+    } else {
+      return optionItems[0].label ? { value: optionItems[0].value, label: optionItems[0].label } : { value: optionItems[0].value, label: optionItems[0].value }
+    }
+  }
 }
 
 export const Select = styled(SelectFactory)`
@@ -302,3 +295,4 @@ export const Select = styled(SelectFactory)`
     padding-bottom: 0;
   }
 `
+
