@@ -6,7 +6,7 @@ import { IconNames } from './IconNames'
 export interface IconProps {
   name: IconNames
   color?: string
-  size: number
+  size?: number
 }
 const IconFactory: React.FC<IconProps> = ({ name, color, size, ...props }) => {
   const IconSVG = IconGlyph[name]
