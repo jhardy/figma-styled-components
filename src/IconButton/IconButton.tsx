@@ -18,6 +18,7 @@ const IconButtonFactory = styled(OptionButton)`
    background: ${(props) => props.on ? '#18A0FB' : 'transparent'};
    color: ${(props) => props.on ? '#ffffff' : '#000000'};
 
+
     &:hover {
       ${(props) => getHoverStyles(props.on || false, props.disabled || false)}
       box-shadow: none;

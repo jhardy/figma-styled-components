@@ -10,4 +10,4 @@ configure(loadStories, module);
 
 
 
-configure(require.context('../src', true, /\.stories\.(js|ts|tsx|mdx)$/), module);
+configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module);

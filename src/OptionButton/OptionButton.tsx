@@ -1,14 +1,15 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { IconNames } from '../Icon/IconNames'
 
 export interface OptionButtonProps {
-  icon: JSX.Element | string
+  icon: IconNames | JSX.Element | string
   on?: boolean
   disabled?: boolean
   onClick?: React.ReactEventHandler
 }
 
-export const OptionButtonContent = styled.span<{on: boolean, disabled: boolean}>`
+export const OptionButtonContent = styled.div<{on: boolean, disabled: boolean}>`
   align-items: center;
   border-radius: 2px;
   background: ${ (props) => props.on ? 'rgba(0, 0, 0, 0.1)' : 'transparent'};
@@ -22,12 +23,6 @@ export const OptionButtonContent = styled.span<{on: boolean, disabled: boolean}>
   text-align: center;
   min-width: 24px;
   width: 24px;
-
-  svg {
-    width: 16px;
-    height: 16px;
-
-  }
 `
 
 const OptionButtonWrapper = styled.button`
