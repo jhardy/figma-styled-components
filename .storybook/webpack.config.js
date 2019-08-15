@@ -12,5 +12,7 @@ module.exports = ({ config }) => {
     ],
   });
   config.resolve.extensions.push('.ts', '.tsx');
+  // disable source maps for now sicne its blowing up the build
+  config.devtool = 'eval';
   return config;
 };
