@@ -26,11 +26,6 @@ exports[`A default Option Button 1`] = `
   width: 24px;
 }
 
-.c2 svg {
-  width: 16px;
-  height: 16px;
-}
-
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -69,7 +64,7 @@ exports[`A default Option Button 1`] = `
   className="c0"
   disabled={false}
 >
-  <span
+  <div
     className="c1 c2"
     disabled={false}
   >
@@ -88,7 +83,7 @@ exports[`A default Option Button 1`] = `
         fillRule="evenodd"
       />
     </svg>
-  </span>
+  </div>
 </button>
 `;
 
@@ -116,11 +111,6 @@ exports[`A dsiabled Option Button 1`] = `
   text-align: center;
   min-width: 24px;
   width: 24px;
-}
-
-.c2 svg {
-  width: 16px;
-  height: 16px;
 }
 
 .c3:active .c1 {
@@ -165,7 +155,7 @@ exports[`A dsiabled Option Button 1`] = `
   className="c0"
   disabled={true}
 >
-  <span
+  <div
     className="c1 c2"
     disabled={true}
   >
@@ -184,7 +174,7 @@ exports[`A dsiabled Option Button 1`] = `
         fillRule="evenodd"
       />
     </svg>
-  </span>
+  </div>
 </button>
 `;
 
@@ -212,11 +202,6 @@ exports[`A on Option Button 1`] = `
   text-align: center;
   min-width: 24px;
   width: 24px;
-}
-
-.c2 svg {
-  width: 16px;
-  height: 16px;
 }
 
 .c0 {
@@ -257,7 +242,7 @@ exports[`A on Option Button 1`] = `
   className="c0"
   disabled={false}
 >
-  <span
+  <div
     className="c1 c2"
     disabled={false}
   >
@@ -276,6 +261,6 @@ exports[`A on Option Button 1`] = `
         fillRule="evenodd"
       />
     </svg>
-  </span>
+  </div>
 </button>
 `;
