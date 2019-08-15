@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`A  Input with placeholder 1`] = `
+exports[`A  Input with Icon 1`] = `
+.c2 {
+  color: currentColor;
+  line-height: 0;
+}
+
+.c1 {
+  width: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .c0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -14,13 +35,13 @@ exports[`A  Input with placeholder 1`] = `
   width: 100%;
   height: 30px;
   margin: 1px 0 1px 0;
-  padding: 8px 4px 8px 7px;
+  padding: 8px 4px 8px 0;
   color: rgba(0,0,0,0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   outline: none;
   background-color: #ffffff;
-  font-family: "Inter",sans-serif;
+  font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
@@ -30,17 +51,22 @@ exports[`A  Input with placeholder 1`] = `
   letter-spacing: 0.005em;
 }
 
+.c0 input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
 .c0:hover {
   color: rgba(0,0,0,0.8);
-  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 
 .c0:active,
-.c0:focus {
-  padding: 8px 4px 8px 6px;
+.c0:focus-within {
   color: #000000;
-  border: 2px solid #18a0fb;
-  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #18a0fb;
 }
 
 .c0::selection {
@@ -68,10 +94,118 @@ exports[`A  Input with placeholder 1`] = `
   color: rgba(0,0,0,0.3);
 }
 
-<input
+<div
   className="c0"
-  placeholder="Hello"
-/>
+>
+  <div
+    className="icon-holder c1"
+  >
+    <div
+      className="c2"
+    >
+      <svg
+        fill="none"
+        height={32}
+        width={32}
+      >
+        <path
+          clipRule="evenodd"
+          d="M12 16.05V9h1v7.05a2.5 2.5 0 010 4.9V23h-1v-2.05a2.5 2.5 0 010-4.9zm2 2.45a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5 4.5h1v-7.05a2.5 2.5 0 000-4.9V9h-1v2.05a2.5 2.5 0 000 4.9V23zm2-9.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"
+          fill="currentColor"
+          fillOpacity={0.8}
+          fillRule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+  <input
+    className=""
+    placeholder="Hello"
+  />
+</div>
+`;
+
+exports[`A  Input with placeholder 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin: 1px 0 1px 0;
+  padding: 8px 4px 8px 8px;
+  color: rgba(0,0,0,0.8);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+  background-color: #ffffff;
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+}
+
+.c0 input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.c0:hover {
+  color: rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.c0:active,
+.c0:focus-within {
+  color: #000000;
+  box-shadow: inset 0 0 0 2px #18a0fb;
+}
+
+.c0::selection {
+  color: #000000;
+  background-color: rgba(24,145,251,0.3);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0::-moz-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0::placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.3);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className=""
+    placeholder="Hello"
+  />
+</div>
 `;
 
 exports[`A default Input 1`] = `
@@ -88,13 +222,13 @@ exports[`A default Input 1`] = `
   width: 100%;
   height: 30px;
   margin: 1px 0 1px 0;
-  padding: 8px 4px 8px 7px;
+  padding: 8px 4px 8px 8px;
   color: rgba(0,0,0,0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   outline: none;
   background-color: #ffffff;
-  font-family: "Inter",sans-serif;
+  font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
@@ -104,17 +238,22 @@ exports[`A default Input 1`] = `
   letter-spacing: 0.005em;
 }
 
+.c0 input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
 .c0:hover {
   color: rgba(0,0,0,0.8);
-  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 
 .c0:active,
-.c0:focus {
-  padding: 8px 4px 8px 6px;
+.c0:focus-within {
   color: #000000;
-  border: 2px solid #18a0fb;
-  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #18a0fb;
 }
 
 .c0::selection {
@@ -142,7 +281,11 @@ exports[`A default Input 1`] = `
   color: rgba(0,0,0,0.3);
 }
 
-<input
+<div
   className="c0"
-/>
+>
+  <input
+    className=""
+  />
+</div>
 `;
