@@ -27,9 +27,10 @@ Install dependency with `yarn` and then run `yarn storybook` to build the storyb
 
 
 ### Todo
-* Document component interfaces better.
+* Document component interfaces better, with code examples
+* Make a demo plugin that uses components
 * Use a theme wrapper
-* Icons
-* Text area
-* Inputs with icons
 * Handle OptionStrip default selection
+* Tabs
+* Dividers
+* Collapsable Sections
