@@ -4,6 +4,7 @@
     "target": "es6",
     "esModuleInterop": true,
     "module": "commonjs",
+    "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
