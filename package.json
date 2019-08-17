@@ -29,11 +29,14 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2"
+    "react-dom": "^16.8.6"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "styled-components": "^4.3.2"
+  }
+  ,
   "devDependencies": {
+    "styled-components": "^4.3.2",
     "@babel/core": "^7.5.5",
     "babel-loader": "^8.0.6",
     "@storybook/react": "^5.2.0-beta.29",
