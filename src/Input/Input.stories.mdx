@@ -1,30 +1,31 @@
-import { Input } from "./Input";
-import { Story, Meta } from "@storybook/addon-docs/blocks";
-import { Icon}  from '../Icon'
+import { Input } from './Input'
+import { Story, Meta } from '@storybook/addon-docs/blocks'
+import { Icon } from '../Icon'
 
-<Meta title="MDX|Input" component={Input} />
+<Meta title='MDX|Input' component={Input} />
 
 # Input
 
 ## Default Input
-<Story name="Input">
-  <div className="component-box">
-    <Input
-      placeholder="I am an input"
-     />
+
+<Story name='Input'>
+  <div className='component-box'>
+    <Input placeholder='I am an input' />
   </div>
 </Story>
 
 ## Icon Input
-<Story name="Icon Input">
-  <div className="component-box">
-    <Input
-      icon={<Icon name="Corners" />}
-      placeholder="I am an input"
-     />
-       <Input
-      icon={<Icon name="Swap" />}
-      placeholder="I am an input"
-     />
+
+<Story name='Icon Input'>
+  <div className='component-box'>
+    <Input icon={<Icon name='Corners' />} placeholder='I am an input' />
+    <Input icon={<Icon name='Swap' />} placeholder='I am an input' />
   </div>
 </Story>
+
+## Props
+
+| Prop Name   | Type                                             | Default | Required | Description                     |
+| :---------- | :----------------------------------------------- | :-----: | :------: | :------------------------------ |
+| icon        | JSX Element                                      |    -    |   no   | Accepts a JSX element to render an icon |
+

@@ -9,7 +9,6 @@
     "outDir": "./dist",
     "strict": true,
     "types": ["react", "jest"],
-    "emitDeclarationOnly": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "stories", "src/**/*.test.*"]

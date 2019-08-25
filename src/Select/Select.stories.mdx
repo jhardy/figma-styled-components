@@ -1,48 +1,50 @@
-import { Select } from "./Select";
-import { Story, Meta } from "@storybook/addon-docs/blocks";
+import { Select } from './Select'
+import { Story, Meta } from '@storybook/addon-docs/blocks'
 
-<Meta title="MDX|Select" component={Select} />
+<Meta title='MDX|Select' component={Select} />
 
 # Select
 
 ## Default Select
-<Story name="Select">
-  <div className="component-box">
+
+<Story name='Select'>
+  <div className='component-box'>
     <Select
       options={[
-        { value: "1", label: "One" },
-        { value: "2", label: "Two" },
-        { value: "3", label: "Three" }
+        { value: '1', label: 'One' },
+        { value: '2', label: 'Two' },
+        { value: '3', label: 'Three' }
       ]}
     />
   </div>
 </Story>
 
 ## Select with Groups
-<Story name="Select with groups">
-  <div className="component-box">
+
+<Story name='Select with groups'>
+  <div className='component-box'>
     <Select
-      placeholder="Select an option"
+      placeholder='Select an option'
       options={[
         {
-          label: "Group 1",
+          label: 'Group 1',
           group: [
-            { label: "Item 1", value: "1" },
-            { label: "Item 2", value: "2" }
+            { label: 'Item 1', value: '1' },
+            { label: 'Item 2', value: '2' }
           ]
         },
         {
-          label: "Group 2",
+          label: 'Group 2',
           group: [
-            { label: "Item 3", value: "3" },
-            { label: "Item 4", value: "4" }
+            { label: 'Item 3', value: '3' },
+            { label: 'Item 4', value: '4' }
           ]
         },
         {
-          label: "Group 3",
+          label: 'Group 3',
           group: [
-            { label: "Item 5", value: "5" },
-            { label: "Item 6", value: "6" }
+            { label: 'Item 5', value: '5' },
+            { label: 'Item 6', value: '6' }
           ]
         }
       ]}
@@ -58,6 +60,6 @@ import { Story, Meta } from "@storybook/addon-docs/blocks";
 | :---------- | :--------------------------------------------------------------------------------------------- | :-----: | :------: | :-------------------------------------- |
 | options     | <code>Array<{label: string, value?: string, group?:Array<value:string, label:string> }></code> |    -    |   yes    | Array of options for the select         |
 | placeholder | string                                                                                         |    -    |    -     | Placeholder for the select              |
-| onChange    | function                                                                                       |    -    |    -     | Callback for when an select has changed |
+| onChange    | function, returns a string of the selected value                                               |    -    |    -     | Callback for when an select has changed |
 
 </div>

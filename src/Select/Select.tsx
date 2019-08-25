@@ -12,6 +12,7 @@ export interface SelectOptions extends SelectOptionItem {
   group?: SelectOptionItem[]
 }
 
+// TODO how to type onChange to return string
 export interface SelectProps {
   options: SelectOptions[]
   onChange?: any
@@ -160,7 +161,7 @@ const SelectOverlay = styled.div<{show: boolean}>`
 
 export class SelectFactory extends React.Component<SelectProps, {selectedOption: {value: string | undefined, label: string | undefined}, madeSelection: boolean, showOptions: boolean} > {
 
-  private figmaSelect = React.createRef()
+  private figmaSelect: React.RefObject<HTMLSelectElement>
 
   constructor (props: SelectProps) {
     super(props)
@@ -172,6 +173,7 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
 
     this.toggleSelect = this.toggleSelect.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.figmaSelect = React.createRef()
   }
 
   public render () {
@@ -179,25 +181,6 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
     return(
       <div {...this.props} >
       <SelectOverlay show={this.state.showOptions ? true : false} onClick={this.toggleSelect} />
-      <select
-        ref={this.figmaSelect as any}
-        onChange={onChange}
-        defaultValue={placeholder ? '' : this.state.selectedOption.value}
-      >
-        {noDefault && <option />}
-        {options.map((option) => {
-          return option.group ?
-            <optgroup label={option.label} key={`opt-group-` + option.label}>
-              {option.group.map((item) => {
-                return <option key={`group` + item.label} value={item.value || item.label}>{item.label}</option>
-              })}
-            </optgroup>
-            :
-            <option key={option.label} value={option.value || option.label}>
-            {option.label}
-            </option>
-        })}
-      </select>
       <SelectTrigger onClick={this.toggleSelect}>
         <Text>{placeholder && !this.state.madeSelection ? placeholder : this.state.selectedOption.label}</Text>
         <SelectChevron />
@@ -235,8 +218,6 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
     </div>
     )
   }
-
-
   private handleClick (event: React.MouseEvent) {
 
     const target = event.currentTarget
@@ -244,11 +225,12 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
     const value = target.getAttribute('data-value') || ''
     const label = target.getAttribute('data-label') || ''
 
+
     this.setState({
       madeSelection: true,
       selectedOption: { value, label },
       showOptions: false
-    })
+    }, this.props.onChange ? this.props.onChange(value) : undefined)
   }
 
   private toggleSelect (e: any) {

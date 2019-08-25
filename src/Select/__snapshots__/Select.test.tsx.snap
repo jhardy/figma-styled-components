@@ -248,52 +248,6 @@ exports[`A Select with grouped options 1`] = `
     className="c1"
     onClick={[Function]}
   />
-  <select
-    defaultValue="1"
-  >
-    <optgroup
-      label="Group 1"
-    >
-      <option
-        value="1"
-      >
-        Item 1
-      </option>
-      <option
-        value="2"
-      >
-        Item 2
-      </option>
-    </optgroup>
-    <optgroup
-      label="Group 2"
-    >
-      <option
-        value="3"
-      >
-        Item 3
-      </option>
-      <option
-        value="4"
-      >
-        Item 4
-      </option>
-    </optgroup>
-    <optgroup
-      label="Group 3"
-    >
-      <option
-        value="5"
-      >
-        Item 5
-      </option>
-      <option
-        value="6"
-      >
-        Item 6
-      </option>
-    </optgroup>
-  </select>
   <button
     className="c2"
     onClick={[Function]}
@@ -646,25 +600,6 @@ exports[`A default Select 1`] = `
     className="c1"
     onClick={[Function]}
   />
-  <select
-    defaultValue="one"
-  >
-    <option
-      value="one"
-    >
-      Option One
-    </option>
-    <option
-      value="two"
-    >
-      Option Two
-    </option>
-    <option
-      value="three"
-    >
-      Option Three
-    </option>
-  </select>
   <button
     className="c2"
     onClick={[Function]}

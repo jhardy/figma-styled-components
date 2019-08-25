@@ -117,8 +117,9 @@ exports[`A default option strip 1`] = `
   >
     <input
       checked={true}
+      name="options-strip-One"
       onChange={[Function]}
-      type="checkbox"
+      type="radio"
       value="1"
     />
     <span
@@ -134,8 +135,9 @@ exports[`A default option strip 1`] = `
   >
     <input
       checked={false}
+      name="options-strip-One"
       onChange={[Function]}
-      type="checkbox"
+      type="radio"
       value="2"
     />
     <span

@@ -20,6 +20,7 @@ exports[`A  Input with Icon 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  color: rgba(0,0,0,0.5);
 }
 
 .c0 {
@@ -121,6 +122,7 @@ exports[`A  Input with Icon 1`] = `
   <input
     className=""
     placeholder="Hello"
+    value="icon"
   />
 </div>
 `;
@@ -204,6 +206,7 @@ exports[`A  Input with placeholder 1`] = `
   <input
     className=""
     placeholder="Hello"
+    value="test"
   />
 </div>
 `;
