@@ -11,12 +11,12 @@ test('A default Input', () => {
 
 
 test('A  Input with placeholder', () => {
-  const tree = renderer.create(<Input placeholder='Hello' />).toJSON()
+  const tree = renderer.create(<Input placeholder='Hello' value='test' />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 test('A  Input with Icon', () => {
-  const tree = renderer.create(<Input icon={<Icon name='Adjust' />} placeholder='Hello' />).toJSON()
+  const tree = renderer.create(<Input icon={<Icon name='Adjust' />} placeholder='Hello' value='icon' />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 

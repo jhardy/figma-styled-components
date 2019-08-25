@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const TextAreaFactory = styled.textarea`
+const TextAreaFactory = styled.textarea`
   box-sizing: border-box;
   display: flex;
   align-items: center;

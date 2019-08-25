@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import * as React from 'react'
 
-export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: JSX.Element
 }
 
@@ -22,6 +22,7 @@ export const InputIconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba(0, 0, 0, 0.5);
 `
 
 export const InputWrapper = styled.div<InputProps>`

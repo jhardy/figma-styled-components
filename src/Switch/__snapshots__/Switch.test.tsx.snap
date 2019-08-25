@@ -104,8 +104,8 @@ exports[`A checked Switch 1`] = `
   >
     <input
       checked={true}
-      onChange={[Function]}
       type="checkbox"
+      value="checked"
     />
     <span
       className="c2 c3"
@@ -222,8 +222,8 @@ exports[`A default Switch 1`] = `
     className="c1"
   >
     <input
-      onChange={[Function]}
       type="checkbox"
+      value="default"
     />
     <span
       className="c2 c3"

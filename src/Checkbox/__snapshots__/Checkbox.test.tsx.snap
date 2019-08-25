@@ -25,6 +25,7 @@ exports[`A checked Checkbox 1`] = `
   border: 1px solid #000000;
   border-radius: 2px;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 .c3:after {
@@ -83,7 +84,9 @@ exports[`A checked Checkbox 1`] = `
   >
     <input
       checked={true}
+      onChange={[Function]}
       type="checkbox"
+      value="checked"
     />
     <span
       className="c2 c3"
@@ -122,6 +125,7 @@ exports[`A default Checkbox 1`] = `
   border: 1px solid #000000;
   border-radius: 2px;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 .c3:after {
@@ -179,7 +183,9 @@ exports[`A default Checkbox 1`] = `
     className="c1"
   >
     <input
+      onChange={[Function]}
       type="checkbox"
+      value="default"
     />
     <span
       className="c2 c3"

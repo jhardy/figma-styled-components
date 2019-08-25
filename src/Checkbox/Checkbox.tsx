@@ -12,6 +12,7 @@ const CheckboxMark = styled.span`
   border: 1px solid #000000;
   border-radius: 2px;
   background-color: #ffffff;
+  box-sizing: border-box;
 
   &:after {
     position: absolute;
@@ -26,12 +27,16 @@ const CheckboxMark = styled.span`
 
 export interface CheckboxContainerProps {
   checked?: boolean,
-  onChange?: () => void
+  value: string
+  onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void)
 }
-const CheckboxContainerFacotry: React.FC<CheckboxContainerProps> = ({ onChange, checked, ...props }) => {
+const CheckboxContainerFacotry: React.FC<CheckboxContainerProps> = ({ onChange, checked, value, ...props }) => {
+  const handleChange = (event: any) => {
+    if (onChange) { onChange(event) }
+  }
   return (
     <div {...props}>
-      <input type='checkbox' onChange={onChange} checked={checked} />
+      <input type='checkbox' onChange={handleChange} checked={checked} value={value} />
       <CheckboxMark />
     </div>
   )
@@ -61,14 +66,15 @@ const CheckboxContainer = styled(CheckboxContainerFacotry)`
 
 
 export interface CheckboxProps {
-  onChange?: () => void
+  onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void)
   checked?: boolean
   label: string
+  value: string
 }
-const CheckboxFactory: React.FC<CheckboxProps> = ({ onChange, label, checked, ...props }) => {
+const CheckboxFactory: React.FC<CheckboxProps> = ({ onChange, label, checked, value, ...props }) => {
   return (
     <label {...props}>
-      <CheckboxContainer onChange={onChange} checked={checked} />
+      <CheckboxContainer onChange={onChange} checked={checked} value={value} />
       <Text>{label}</Text>
     </label>
   )
