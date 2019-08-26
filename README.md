@@ -7,6 +7,8 @@ A set of styled components modeled after the Figma UI
 
 ```npm i figma-styled-components --save```
 
+To test this library I've created this Figma plugin: [fig-ui](https://github.com/jhardy/fig-ui), that uses the components to recreate the Figma sidebar. You can clone the repo and checkout the code to see some example of the components in an actual Figma plugin.
+
 ```
 
 import {Button, Checkbox, Input, Label, SectionTitle, Select, Switch, Text} from 'figma-styled-components`
