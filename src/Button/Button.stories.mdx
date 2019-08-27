@@ -1,49 +1,49 @@
-import { Button } from "./Button";
-import { Text } from "../Text";
-import { OptionButton } from "../OptionButton";
-import { IconButton } from "../IconButton";
-import { Story, Meta } from "@storybook/addon-docs/blocks";
+import { Button } from './Button'
+import { Text } from '../Text'
+import { OptionButton } from '../OptionButton'
+import { IconButton } from '../IconButton'
+import { Story, Meta } from '@storybook/addon-docs/blocks'
 import { Icon } from '../Icon/Icon'
 
-<Meta title="MDX|Buttons" component={Button} />
+<Meta title='MDX|Buttons' component={Button} />
 
 # Buttons
 
-<Story name="Buttons">
+<Story name='Buttons'>
   <div>
-    <div className="component-box">
-      <Text size="xlarge" weight="bold">
+    <div className='component-box'>
+      <Text size='xlarge' weight='bold'>
         Primary
       </Text>
       <br />
-      <Text size="large">Normal</Text>
+      <Text size='large'>Normal</Text>
       <div>
-        <Button variant="primary">Label</Button>
-        <Button variant="primary" disabled={true}>
+        <Button variant='primary'>Label</Button>
+        <Button variant='primary' disabled={true}>
           Label
         </Button>
       </div>
-      <Text size="large">Destructive</Text>
+      <Text size='large'>Destructive</Text>
       <div>
-        <Button variant="primary" destructive>
+        <Button variant='primary' destructive>
           Label
         </Button>
-        <Button variant="primary" disabled={true} destructive>
+        <Button variant='primary' disabled={true} destructive>
           Label
         </Button>
       </div>
     </div>
-    <div className="component-box">
-      <Text size="xlarge" weight="bold">
+    <div className='component-box'>
+      <Text size='xlarge' weight='bold'>
         Secondary
       </Text>
       <br />
-      <Text size="large">Normal</Text>
+      <Text size='large'>Normal</Text>
       <div>
         <Button>Label</Button>
         <Button disabled={true}>Label</Button>
       </div>
-      <Text size="large">Destructive</Text>
+      <Text size='large'>Destructive</Text>
       <div>
         <Button destructive>Label</Button>
         <Button disabled={true} destructive>
@@ -51,6 +51,11 @@ import { Icon } from '../Icon/Icon'
         </Button>
       </div>
     </div>
+     <div className='component-box'>
+        <Text size='large'>Full Width</Text>
+        <Button fullWidth={true}>Full Width</Button>
+        <Button variant="primary" fullWidth={true}>Full Width</Button>
+    </div>
   </div>
 </Story>
 
@@ -58,22 +63,21 @@ import { Icon } from '../Icon/Icon'
 
 ## Props
 
-| Prop Name   | Type                   | Default     | Required | Description                           |
-| :---------- | :--------------------- | :---------- | :------: | :------------------------------------ |
+| Prop Name   | Type                                      | Default                  | Required | Description                           |
+| :---------- | :---------------------------------------- | :----------------------- | :------: | :------------------------------------ |
 | variant     | <code>"primary" &#124; "secondary"</code> | <code>"secondary"</code> |    -     | Button's appearance                   |
-| destructive | boolean                | false       |    -     | If button's action is destructive     |
-| disabled    | boolean                | false       |    -     | If button is disabled                 |
-| onClick     | function               | -           |    -     | Callback for Button's `onClick` event |
+| destructive | boolean                                   | false                    |    -     | If button's action is destructive     |
+| disabled    | boolean                                   | false                    |    -     | If button is disabled                 |
+| fullWidth | boolean                                |    -    |    -     | Button takes up 100% of its container |
+| onClick     | function                                  | -                        |    -     | Callback for Button's `onClick` event |
 
 </div>
 
 # Icon Button
 
-<Story name="IconButton">
-  <div className="component-box">
-    <IconButton
-      icon={<Icon name="Styles" />}
-    />
+<Story name='IconButton'>
+  <div className='component-box'>
+    <IconButton icon={<Icon name='Styles' />} />
   </div>
 </Story>
 
@@ -81,22 +85,20 @@ import { Icon } from '../Icon/Icon'
 
 ## Props
 
-| Prop Name | Type                  | Default | Required | Description                           |
-| :-------- | :-------------------- | :-----: | :------: | :------------------------------------ |
+| Prop Name | Type                                   | Default | Required | Description                           |
+| :-------- | :------------------------------------- | :-----: | :------: | :------------------------------------ |
 | icon      | <code>JSX.Element &#124; string</code> |    -    |   yes    | Icon for the button                   |
-| on        | boolean               |  false  |    -     | If the button is toggled on           |
-| disabled  | boolean               |  false  |    -     | If the button is disabled             |
-| onClick   | function              |    -    |    -     | Callback for button's `onClick` event |
+| on        | boolean                                |  false  |    -     | If the button is toggled on           |
+| disabled  | boolean                                |  false  |    -     | If the button is disabled             |
+| onClick   | function                               |    -    |    -     | Callback for button's `onClick` event |
 
 </div>
 
 # OptionButton
 
-<Story name="OptionButton">
-  <div className="component-box">
-    <OptionButton
-      icon={<Icon name="LinkConnected" size={32} />}
-    />
+<Story name='OptionButton'>
+  <div className='component-box'>
+    <OptionButton icon={<Icon name='LinkConnected' size={32} />} />
   </div>
 </Story>
 
@@ -104,11 +106,11 @@ import { Icon } from '../Icon/Icon'
 
 ## Props
 
-| Prop Name | Type                  | Default | Required | Description                           |
-| :-------- | :-------------------- | :-----: | :------: | :------------------------------------ |
+| Prop Name | Type                                   | Default | Required | Description                           |
+| :-------- | :------------------------------------- | :-----: | :------: | :------------------------------------ |
 | icon      | <code>JSX.Element &#124; string</code> |    -    |   yes    | Icon for the button                   |
-| on        | boolean               |  false  |    -     | If the button is toggled on           |
-| disabled  | boolean               |  false  |    -     | If the button is disabled             |
-| onClick   | function              |    -    |    -     | Callback for button's `onClick` event |
+| on        | boolean                                |  false  |    -     | If the button is toggled on           |
+| disabled  | boolean                                |  false  |    -     | If the button is disabled             |
+| onClick   | function                               |    -    |    -     | Callback for button's `onClick` event |
 
 </div>
