@@ -97,6 +97,55 @@ exports[`A disabped Button 1`] = `
 />
 `;
 
+exports[`A full width Button 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 30px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 1px 0 1px 0;
+  padding: 6px 16px 5px 16px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  color: rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  font-family: "Inter",sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  opacity: 1;
+  width: 100%;
+}
+
+.c0:active,
+.c0:focus {
+  box-shadow: inset 0 0 0 2px #18a0fb;
+}
+
+<button
+  className="c0"
+/>
+`;
+
 exports[`A primary Button 1`] = `
 .c0 {
   box-sizing: border-box;

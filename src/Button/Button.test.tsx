@@ -25,4 +25,10 @@ test('A disabped Button', () => {
   expect(tree).toMatchSnapshot()
 })
 
+test('A full width Button', () => {
+  const tree = renderer.create(<Button fullWidth={true} />).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+
 

@@ -7,6 +7,7 @@ export interface ButtonProps {
   variant?: ButtonVariants
   destructive?: boolean
   disabled?: boolean
+  fullWidth?: boolean
 }
 
 const getButtonStyles = (
@@ -102,4 +103,5 @@ export const Button = styled.button<ButtonProps>`
   ${(props) =>
     props.destructive ? getDestructiveStyles(props.variant) : undefined}
   opacity: ${(props) => (props.disabled && props.destructive ? 0.4 : 1)};
+  width: ${(props) => props.fullWidth ? '100%' : false };
 `
