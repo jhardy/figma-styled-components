@@ -1,0 +1,23 @@
+import { Disclosure } from './Disclosure'
+import { Story, Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title='MDX|Disclosure' component={Disclosure} />
+
+# Disclosure
+
+<Story name='Disclosure'>
+  <div className='component-box'>
+    <Disclosure title='Disclosure'>Disclosure Content</Disclosure>
+  </div>
+</Story>
+
+<div className="props-table">
+
+## Props
+
+| Prop Name | Type     | Default | Required | Description                              |
+| :-------- | :------- | :-----: | :------: | :--------------------------------------- |
+| title     | string   |    -    |   yes    | Title of the Disclosure        |
+| collapsed | boolean |    true   |    -     | If the Disclosure is collapsed or not |
+
+</div>
