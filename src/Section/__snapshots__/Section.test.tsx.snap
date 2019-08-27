@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A Section with actions 1`] = `
+.c6 {
+  color: currentColor;
+  line-height: 0;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  color: rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 {
+  padding: 8px;
+}
+
+.c2 .c3 {
+  opacity: 1;
+}
+
+.c2 .c7 {
+  display: block;
+}
+
+.c2:hover .c3 {
+  opacity: 1;
+}
+
+.c1 + .c0 {
+  border-top: solid 1px rgba(0,0,0,0.1);
+}
+
+<section
+  className="c0 c1 c2"
+  title="Section"
+>
+  <div
+    className="c3 c4"
+  >
+    <span
+      className="c5"
+    >
+      Section
+    </span>
+    <div
+      className=""
+    >
+      <div
+        className="c6"
+      >
+        <svg
+          fill="none"
+          height={32}
+          width={32}
+        >
+          <path
+            clipRule="evenodd"
+            d="M15.5 15.5v-5h1v5h5v1h-5v5h-1v-5h-5v-1h5z"
+            fill="currentColor"
+            fillOpacity={0.8}
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7 "
+  >
+    Hello
+  </div>
+</section>
+`;
+
+exports[`A collapsed Section 1`] = `
+.c6 {
+  color: currentColor;
+  line-height: 0;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  color: rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 .c3 {
+  opacity: 1;
+}
+
+.c8 .c7 {
+  display: block;
+}
+
+.c8:hover .c3 {
+  opacity: 1;
+}
+
+.c2 {
+  padding: 8px;
+}
+
+.c2 .c3 {
+  opacity: 0.5;
+}
+
+.c2 .c7 {
+  display: none;
+}
+
+.c2:hover .c3 {
+  opacity: 1;
+}
+
+.c1 + .c0 {
+  border-top: solid 1px rgba(0,0,0,0.1);
+}
+
+<section
+  className="c0 c1 c2"
+  title="Section"
+>
+  <div
+    className="c3 c4"
+  >
+    <span
+      className="c5"
+    >
+      Section
+    </span>
+    <div
+      className=""
+    >
+      <div
+        className="c6"
+      >
+        <svg
+          fill="none"
+          height={32}
+          width={32}
+        >
+          <path
+            clipRule="evenodd"
+            d="M15.5 15.5v-5h1v5h5v1h-5v5h-1v-5h-5v-1h5z"
+            fill="currentColor"
+            fillOpacity={0.8}
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7 "
+  >
+    Hello
+  </div>
+</section>
+`;
+
+exports[`A default Section 1`] = `
+.c5 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  color: rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 {
+  padding: 8px;
+}
+
+.c2 .c3 {
+  opacity: 1;
+}
+
+.c2 .c6 {
+  display: block;
+}
+
+.c2:hover .c3 {
+  opacity: 1;
+}
+
+.c1 + .c0 {
+  border-top: solid 1px rgba(0,0,0,0.1);
+}
+
+<section
+  className="c0 c1 c2"
+  title="Section"
+>
+  <div
+    className="c3 c4"
+  >
+    <span
+      className="c5"
+    >
+      Section
+    </span>
+  </div>
+  <div
+    className="c6 "
+  >
+    Hello
+  </div>
+</section>
+`;

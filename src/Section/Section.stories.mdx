@@ -1,0 +1,28 @@
+import { Section } from './Section'
+import { Icon } from '../Icon'
+import { Story, Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title='MDX|Section' component={Section} />
+
+# Section
+
+<Story name='Section'>
+  <div className='component-box'>
+    <Section title='Section 1'>Section Content</Section>
+    <Section title='Collapsed Section' collapsed={true} actions={<Icon name='Plus' />}>
+      Collapsed
+    </Section>
+  </div>
+</Story>
+
+<div className="props-table">
+
+## Props
+
+| Prop Name | Type    | Default | Required | Description                           |
+| :-------- | :------ | :-----: | :------: | :------------------------------------ |
+| title     | string  |    -    |   yes    | Title of the Section                  |
+| actions   | JSX     |    -    |    -     | Icons to the right of a section title |
+| collapsed | boolean |  false  |    -     | If the Section is collapsed or not    |
+
+</div>
