@@ -27,6 +27,8 @@ Current documentation is in [storybook project here](https://determined-borg-d1c
 #### Locally
 Install dependency with `yarn` and then run `yarn storybook` to build the storybook for this project
 
+##### Build
+You can build the project with `yarn build`
 
 ### Todo
 * Refactor to functional components
