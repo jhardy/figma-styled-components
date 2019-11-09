@@ -5,7 +5,7 @@ import { Text } from '../Text'
 
 export interface SelectOptionItem {
   label?: string
-  value: string
+  value?: string
 }
 
 export interface SelectOptions extends SelectOptionItem {
