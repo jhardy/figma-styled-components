@@ -30,14 +30,13 @@ export const InputWrapper = styled.div<InputProps>`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 32px;
   margin: 1px 0 1px 0;
   padding: ${(props) => (props.icon ? '8px 4px 8px 0' : '8px 4px 8px 8px')};
   color: rgba(0, 0, 0, 0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   outline: none;
-  background-color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 11px;
@@ -48,7 +47,7 @@ export const InputWrapper = styled.div<InputProps>`
     border: none;
     outline: none;
     width: 100%;
-    height: 100%;
+    height: 24px;
   }
 
   &:hover {
