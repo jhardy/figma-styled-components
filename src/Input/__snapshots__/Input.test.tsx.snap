@@ -34,14 +34,13 @@ exports[`A  Input with Icon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 32px;
   margin: 1px 0 1px 0;
   padding: 8px 4px 8px 0;
   color: rgba(0,0,0,0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   outline: none;
-  background-color: #ffffff;
   font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
@@ -56,7 +55,7 @@ exports[`A  Input with Icon 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  height: 100%;
+  height: 24px;
 }
 
 .c0:hover {
@@ -139,14 +138,13 @@ exports[`A  Input with placeholder 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 32px;
   margin: 1px 0 1px 0;
   padding: 8px 4px 8px 8px;
   color: rgba(0,0,0,0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   outline: none;
-  background-color: #ffffff;
   font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
@@ -161,7 +159,7 @@ exports[`A  Input with placeholder 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  height: 100%;
+  height: 24px;
 }
 
 .c0:hover {
@@ -223,14 +221,13 @@ exports[`A default Input 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 32px;
   margin: 1px 0 1px 0;
   padding: 8px 4px 8px 8px;
   color: rgba(0,0,0,0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   outline: none;
-  background-color: #ffffff;
   font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
@@ -245,7 +242,7 @@ exports[`A default Input 1`] = `
   border: none;
   outline: none;
   width: 100%;
-  height: 100%;
+  height: 24px;
 }
 
 .c0:hover {

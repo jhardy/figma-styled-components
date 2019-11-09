@@ -63,7 +63,7 @@ class OptionStripFactory extends React.Component<
       defaultSelected: this.props.defaultSelected || 0,
       options: this.props.options,
       selectedOption: this.props.defaultSelected
-        ? this.props.options[this.state.defaultSelected].value
+        ? this.props.options[this.props.defaultSelected].value
         : this.props.options[0].value
     }
     this.handleChange = this.handleChange.bind(this)

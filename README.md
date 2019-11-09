@@ -27,13 +27,17 @@ Current documentation is in [storybook project here](https://determined-borg-d1c
 #### Locally
 Install dependency with `yarn` and then run `yarn storybook` to build the storybook for this project
 
+##### Build
+You can build the project with `yarn build`
 
 ### Todo
+* Refactor to functional components
+* Refactor select, handle default option better,
 * Document component interfaces better, with code examples (maybe switch away from storybook)
 * Expand demo plugin that uses components
 * Use a theme wrapper
-* Handle OptionStrip default selection
+* Handle OptionStrip default selection better
 * Tabs
 * Decide if Text components should accept color
 * Select with Icon, in Select trigger as well as in select option
-* Maybe, select like menus with nested options
+
