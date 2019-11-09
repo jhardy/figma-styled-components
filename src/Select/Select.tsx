@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { Text } from '../Text'
 
 export interface SelectOptionItem {
-  label: string
-  value?: string
+  label?: string
+  value: string
 }
 
 export interface SelectOptions extends SelectOptionItem {
@@ -15,6 +15,7 @@ export interface SelectOptions extends SelectOptionItem {
 // TODO how to type onChange to return string
 export interface SelectProps {
   options: SelectOptions[]
+  defaultOption?: SelectOptionItem
   onChange?: any
   placeholder?: string
   noDefault?: boolean
@@ -159,7 +160,7 @@ const SelectOverlay = styled.div<{show: boolean}>`
 `
 
 
-export class SelectFactory extends React.Component<SelectProps, {selectedOption: {value: string | undefined, label: string | undefined}, madeSelection: boolean, showOptions: boolean} > {
+export class SelectFactory extends React.Component<SelectProps, {selectedOption: SelectOptionItem, madeSelection: boolean, showOptions: boolean} > {
 
   private figmaSelect: React.RefObject<HTMLSelectElement>
 
@@ -167,7 +168,7 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
     super(props)
     this.state = {
       madeSelection: false,
-      selectedOption: this.getInialOption(props.options),
+      selectedOption: props.defaultOption ? props.defaultOption : this.getInialOption(props.options),
       showOptions: false
     }
 
