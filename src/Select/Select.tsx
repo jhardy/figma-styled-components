@@ -178,7 +178,7 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
   }
 
   public render () {
-    const { placeholder, options, onChange, noDefault } = this.props
+    const { defaultOption, placeholder, options, onChange, noDefault } = this.props
     return(
       <div {...this.props} >
       <SelectOverlay show={this.state.showOptions ? true : false} onClick={this.toggleSelect} />

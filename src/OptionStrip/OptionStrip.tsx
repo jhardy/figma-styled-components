@@ -12,7 +12,7 @@ export interface StripOption {
 // TODO figure out why onchange even fires twice here
 export interface OptionStripProps {
   options: StripOption[]
-  defaultSelected?: number
+  defaultOption?: number
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -60,10 +60,10 @@ class OptionStripFactory extends React.Component<
   constructor (props: OptionStripProps) {
     super(props)
     this.state = {
-      defaultSelected: this.props.defaultSelected || 0,
+      defaultSelected: this.props.defaultOption || 0,
       options: this.props.options,
-      selectedOption: this.props.defaultSelected
-        ? this.props.options[this.props.defaultSelected].value
+      selectedOption: this.props.defaultOption
+        ? this.props.options[this.props.defaultOption].value
         : this.props.options[0].value
     }
     this.handleChange = this.handleChange.bind(this)
