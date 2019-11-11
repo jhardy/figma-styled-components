@@ -200,49 +200,6 @@ exports[`A Select with grouped options 1`] = `
 
 <div
   className="c0"
-  options={
-    Array [
-      Object {
-        "group": Array [
-          Object {
-            "label": "Item 1",
-            "value": "1",
-          },
-          Object {
-            "label": "Item 2",
-            "value": "2",
-          },
-        ],
-        "label": "Group 1",
-      },
-      Object {
-        "group": Array [
-          Object {
-            "label": "Item 3",
-            "value": "3",
-          },
-          Object {
-            "label": "Item 4",
-            "value": "4",
-          },
-        ],
-        "label": "Group 2",
-      },
-      Object {
-        "group": Array [
-          Object {
-            "label": "Item 5",
-            "value": "5",
-          },
-          Object {
-            "label": "Item 6",
-            "value": "6",
-          },
-        ],
-        "label": "Group 3",
-      },
-    ]
-  }
 >
   <div
     className="c1"
@@ -579,22 +536,6 @@ exports[`A default Select 1`] = `
 
 <div
   className="c0"
-  options={
-    Array [
-      Object {
-        "label": "Option One",
-        "value": "one",
-      },
-      Object {
-        "label": "Option Two",
-        "value": "two",
-      },
-      Object {
-        "label": "Option Three",
-        "value": "three",
-      },
-    ]
-  }
 >
   <div
     className="c1"
