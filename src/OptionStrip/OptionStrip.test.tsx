@@ -10,7 +10,7 @@ test('A default option strip', () => {
 })
 
 test('A option strip with default value set', () => {
-  const tree = renderer.create(<OptionStrip defaultOption={1} options={[{ value: '1', label: 'One' }, { value: '2', label: 'Two' } ]} />).toJSON()
+  const tree = renderer.create(<OptionStrip defaultValue={'1'} options={[{ value: '1', label: 'One' }, { value: '2', label: 'Two' } ]} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 

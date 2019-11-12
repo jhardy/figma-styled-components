@@ -4,21 +4,27 @@ import styled from 'styled-components'
 import { Text } from '../Text'
 
 export interface SelectOptionItem {
-  label?: string
-  value?: string
+  label: string
+  value: string
 }
 
 export interface SelectOptions extends SelectOptionItem {
   group?: SelectOptionItem[]
 }
 
+interface SelectOptionGroup {
+  label: string
+  group: SelectOptionItem[]
+}
+
 // TODO how to type onChange to return string
 export interface SelectProps {
-  options: SelectOptions[]
-  defaultOption?: SelectOptionItem
+  options: Array<SelectOptionItem | SelectOptionGroup>
+  defaultValue?: SelectOptionItem
   onChange?: any
   placeholder?: string
   noDefault?: boolean
+  value?: { value: string; label: string }
 }
 
 const SelectedCheck = () => {
@@ -66,20 +72,30 @@ const SelectItem = styled.li<{ selected?: boolean }>`
   }
 `
 
-const SelectGroup = styled.div`
-`
+const SelectGroup = styled.div``
 
 const SelectChevronIcon = (props: any) => {
-  return(
-  <div {...props}><svg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'>
-  <path fillRule='evenodd' clipRule='evenodd' d='M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z' fill='currentColor' />
-  </svg>
-  </div>
+  return (
+    <div {...props}>
+      <svg
+        width='8'
+        height='5'
+        viewBox='0 0 8 5'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          fillRule='evenodd'
+          clipRule='evenodd'
+          d='M3.64645 4.35359L0.646454 1.35359L1.35356 0.646484L4.00001 3.29293L6.64645 0.646484L7.35356 1.35359L4.35356 4.35359L4.00001 4.70714L3.64645 4.35359Z'
+          fill='currentColor'
+        />
+      </svg>
+    </div>
   )
 }
 
-const SelectChevron = styled(SelectChevronIcon)`
-`
+const SelectChevron = styled(SelectChevronIcon)``
 
 const SelectTrigger = styled.button`
   display: flex;
@@ -94,7 +110,7 @@ const SelectTrigger = styled.button`
   border: 1px solid transparent;
   border-radius: 2px;
   background-color: #ffffff;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
@@ -149,27 +165,32 @@ const SelectOptions = styled.ul`
   }
 `
 
-const SelectOverlay = styled.div<{show: boolean}>`
-  display: ${ (props) => props.show ? 'block' : 'none'};
+const SelectOverlay = styled.div<{ show: boolean }>`
+  display: ${(props) => (props.show ? 'block' : 'none')};
   position: fixed;
   width: 100%;
-  height:100%;
+  height: 100%;
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0);
 `
 
-
-export class SelectFactory extends React.Component<SelectProps, {selectedOption: SelectOptionItem, madeSelection: boolean, showOptions: boolean} > {
-
+export class SelectFactory extends React.Component<
+  SelectProps,
+  { value: SelectOptionItem; madeSelection: boolean; showOptions: boolean }
+> {
   private figmaSelect: React.RefObject<HTMLSelectElement>
 
-  constructor (props: SelectProps) {
+  constructor(props: SelectProps) {
     super(props)
     this.state = {
       madeSelection: false,
-      selectedOption: props.defaultOption ? props.defaultOption : this.getInialOption(props.options),
-      showOptions: false
+      showOptions: false,
+      value: props.value
+        ? props.value
+        : props.defaultValue
+        ? props.defaultValue
+        : this.getInialOption()
     }
 
     this.toggleSelect = this.toggleSelect.bind(this)
@@ -177,72 +198,120 @@ export class SelectFactory extends React.Component<SelectProps, {selectedOption:
     this.figmaSelect = React.createRef()
   }
 
-  public render () {
-    const { defaultOption, placeholder, options, onChange, noDefault, ...props} = this.props
-    return(
-      <div {...props} >
-      <SelectOverlay show={this.state.showOptions ? true : false} onClick={this.toggleSelect} />
-      <SelectTrigger onClick={this.toggleSelect}>
-        <Text>{placeholder && !this.state.madeSelection ? placeholder : this.state.selectedOption.label}</Text>
-        <SelectChevron />
-      </SelectTrigger>
-      <SelectOptions className={this.state.showOptions ? 'show-options' : undefined}>
-        {options.map((option, i) => {
-          return option.group ?
-            <SelectGroup key={`group-parent-` + i}>
-              {option.group.map((item) => {
-                return (
-                <SelectItem key={`group-` + item.label} id={item.value || item.label} data-value={item.value} data-label={item.label || item.value} onClick={this.handleClick}>
-                  {this.state.selectedOption.value === item.value && this.state.madeSelection && <SelectedCheck />}
-                  <Text size='medium' inverted={true}>
-                    {item.label}
-                  </Text>
-                </SelectItem>)
-              })}
-            </SelectGroup>
-            :
-            <SelectItem
-              key={`list-` + i}
-              id={option.value}
-              data-value={option.value}
-              data-label={option.label || option.value}
-              onClick={this.handleClick}
-            >
-              {this.state.selectedOption.value === option.value && <SelectedCheck />}
-              <Text size='medium' inverted={true}>
-                {option.label || option.value}
-              </Text>
-            </SelectItem>
+  public componentDidUpdate(prevState: any) {
+    if (this.props.value && prevState.value !== this.props.value) {
+      this.updateState(this.props.value.label, this.props.value.value)
+    }
+  }
 
-        })}
-      </SelectOptions>
-    </div>
+  public render () {
+    const {
+      defaultValue,
+      placeholder,
+      options,
+      onChange,
+      noDefault,
+      value,
+      ...props
+    } = this.props
+    return (
+      <div {...props}>
+        <SelectOverlay
+          show={this.state.showOptions ? true : false}
+          onClick={this.toggleSelect}
+        />
+        <SelectTrigger onClick={this.toggleSelect}>
+          <Text>
+            {placeholder && !this.state.madeSelection
+              ? placeholder
+              : this.state.value.label}
+          </Text>
+          <SelectChevron />
+        </SelectTrigger>
+        <SelectOptions
+          className={this.state.showOptions ? 'show-options' : undefined}
+        >
+          {options.map((option, i) => {
+            if ('group' in option) {
+              return (
+                <SelectGroup key={`group-parent-` + i}>
+                  {option.group.map((item) => {
+                    return (
+                      <SelectItem
+                        key={`group-` + item.label}
+                        id={item.value || item.label}
+                        data-value={item.value}
+                        data-label={item.label || item.value}
+                        onClick={this.handleClick}
+                      >
+                        {this.state.value.value === item.value &&
+                          this.state.madeSelection && <SelectedCheck />}
+                        <Text size='medium' inverted={true}>
+                          {item.label}
+                        </Text>
+                      </SelectItem>
+                    )
+                  })}
+                </SelectGroup>
+              )
+            } else {
+              return (
+                <SelectItem
+                  key={`list-` + i}
+                  id={option.value}
+                  data-value={option.value}
+                  data-label={option.label || option.value}
+                  onClick={this.handleClick}
+                >
+                  {this.state.value.value === option.value && <SelectedCheck />}
+                  <Text size='medium' inverted={true}>
+                    {option.label || option.value}
+                  </Text>
+                </SelectItem>
+              )
+            }
+          })}
+        </SelectOptions>
+      </div>
     )
   }
-  private handleClick (event: React.MouseEvent) {
 
+  private handleClick(event: React.MouseEvent) {
     const target = event.currentTarget
 
     const value = target.getAttribute('data-value') || ''
     const label = target.getAttribute('data-label') || ''
 
-
-    this.setState({
-      madeSelection: true,
-      selectedOption: { value, label },
-      showOptions: false
-    }, this.props.onChange ? this.props.onChange(value) : undefined)
+    this.updateState(value, label)
   }
 
-  private toggleSelect (e: any) {
+  private updateState(value: string, label: string) {
+    this.setState(
+      {
+        madeSelection: true,
+        showOptions: false,
+        value: { value, label }
+      },
+      this.props.onChange ? this.props.onChange(value) : undefined
+    )
+  }
+
+  private toggleSelect(e: any) {
     this.setState({ showOptions: !this.state.showOptions })
   }
 
-  private getInialOption (optionItems: SelectOptions[]) {
-    if (optionItems[0].group) {
-      return optionItems[0].group[0].label ? { value: optionItems[0].group[0].value, label: optionItems[0].group[0].label } : { value: optionItems[0].group[0].value, label: optionItems[0].group[0].value }
+  private getInialOption  () {
+    const firstOption = this.props.options[0]
+    if ('group' in firstOption) {
+      return {
+        label: firstOption.group[0].label,
+        value: firstOption.group[0].value
+      }
     } else {
-      return optionItems[0].label ? { value: optionItems[0].value, label: optionItems[0].label } : { value: optionItems[0].value, label: optionItems[0].value }
+      return {
+        label: firstOption.label,
+        value: firstOption.value
+      }
     }
   }
 }
@@ -259,7 +328,7 @@ export const Select = styled(SelectFactory)`
     display: none;
   }
 
-  ${SelectOptions}{
+  ${SelectOptions} {
     margin: 0;
     padding: 8px 0 8px 0;
   }
@@ -278,4 +347,3 @@ export const Select = styled(SelectFactory)`
     padding-bottom: 0;
   }
 `
-
