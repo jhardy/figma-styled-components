@@ -24,7 +24,7 @@ import { Story, Meta } from '@storybook/addon-docs/blocks'
 <Story name='Select with default'>
   <div className='component-box'>
     <Select
-      defaultOption={{ value: '2', label: 'Two' }}
+      defaultValue={{ value: '3', label: 'Three' }}
       options={[
         { value: '1', label: 'One' },
         { value: '2', label: 'Two' },
@@ -71,11 +71,12 @@ import { Story, Meta } from '@storybook/addon-docs/blocks'
 
 ## Props
 
-| Prop Name     | Type                                                                                           | Default | Required | Description                             |
-| :------------ | :--------------------------------------------------------------------------------------------- | :-----: | :------: | :-------------------------------------- |
-| options       | <code>Array<{label?: string, value: string, group?:Array<value:string, label:string> }></code> |    -    |   yes    | Array of options for the select         |
-| deafultOption | <code>{label?: string, value: string}></code>                                                  |    -    |    -     | Object for a default value        |
-| placeholder   | string                                                                                         |    -    |    -     | Placeholder for the select              |
-| onChange      | function, returns a string of the selected value                                               |    -    |    -     | Callback for when an select has changed |
+| Prop Name    | Type                                             |                              Default                               | Required | Description                             |
+| :----------- | :----------------------------------------------- | :----------------------------------------------------------------: | :------: | :-------------------------------------- |
+| options      | <code>Array<{label: string, value: string} \| {label: string, group:Array<value:string, label:string> }></code> |    -     | yes                                     | Array of options for the select |
+| deafultValue | <code>{label: string, value: string}></code>     |                                 -                                  |    -     | Object for a default value              |
+| value        | <code>{label: string, value: string}></code>     |                                 -                                  |    -     | Object for the value of the select      |
+| placeholder  | string                                           |                                 -                                  |    -     | Placeholder for the select              |
+| onChange     | function, returns a string of the selected value |                                 -                                  |    -     | Callback for when an select has changed |
 
 </div>

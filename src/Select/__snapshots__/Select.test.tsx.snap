@@ -81,7 +81,7 @@ exports[`A Select with grouped options 1`] = `
   border: 1px solid transparent;
   border-radius: 2px;
   background-color: #ffffff;
-  font-family: "Inter",sans-serif;
+  font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
@@ -417,7 +417,7 @@ exports[`A default Select 1`] = `
   border: 1px solid transparent;
   border-radius: 2px;
   background-color: #ffffff;
-  font-family: "Inter",sans-serif;
+  font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;

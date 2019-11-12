@@ -12,7 +12,8 @@ export interface StripOption {
 // TODO figure out why onchange even fires twice here
 export interface OptionStripProps {
   options: StripOption[]
-  defaultOption?: number
+  defaultValue?: string
+  value?: string
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -55,16 +56,14 @@ const OptionStripOption = styled.div<{ selected?: boolean }>`
 
 class OptionStripFactory extends React.Component<
   OptionStripProps,
-  { options: StripOption[]; defaultSelected: number; selectedOption: string }
+  { options: StripOption[]; defaultSelected: string; value: string }
 > {
   constructor (props: OptionStripProps) {
     super(props)
     this.state = {
-      defaultSelected: this.props.defaultOption || 0,
+      defaultSelected: this.props.defaultValue || this.props.options[0].value,
       options: this.props.options,
-      selectedOption: this.props.defaultOption
-        ? this.props.options[this.props.defaultOption].value
-        : this.props.options[0].value
+      value: this.props.value ? this.props.value : this.props.defaultValue ? this.props.defaultValue : this.props.options[0].value
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -76,7 +75,7 @@ class OptionStripFactory extends React.Component<
           return (
             <OptionStripOption
               key={`options-strip-item-` + option.value}
-              selected={option.value === this.state.selectedOption}
+              selected={option.value === this.state.value}
             >
               <input
                 type='radio'
@@ -84,7 +83,7 @@ class OptionStripFactory extends React.Component<
                 onChange={this.handleChange}
                 value={option.value}
                 checked={
-                  option.value === this.state.selectedOption ? true : false
+                  option.value === this.state.value ? true : false
                 }
               />
               <Text size='small'>
@@ -97,11 +96,16 @@ class OptionStripFactory extends React.Component<
     )
   }
 
-  private handleChange (event: React.ChangeEvent<HTMLInputElement>) {
-    event.persist()
+  public componentDidUpdate (prevState: any) {
+    if (this.props.value && prevState.value !== this.props.value) {
+      this.setState({value: this.props.value})
+    }
+  }
+
+  private updateState(value:string, event?:any) {
     this.setState(
       {
-        selectedOption: event.target.value
+        value: value
       },
       () => {
         if (this.props.onChange) {
@@ -109,6 +113,13 @@ class OptionStripFactory extends React.Component<
         }
       }
     )
+  }
+
+  private handleChange (event: React.ChangeEvent<HTMLInputElement>) {
+    event.persist()
+    const value = event.target.value
+    const storedEvent = event
+    this.updateState(value, storedEvent)
   }
 }
 
