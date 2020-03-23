@@ -1,5 +1,6 @@
 export * from './Button'
 export * from './Checkbox'
+export * from './Disclosure'
 export * from './IconButton'
 export * from './Icon'
 export * from './Input'
