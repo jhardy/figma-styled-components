@@ -35,12 +35,10 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "styled-components": "^4.3.2",
     "@babel/core": "^7.5.5",
-    "babel-loader": "^8.0.6",
-    "@storybook/react": "^5.2.0-beta.29",
     "@storybook/addon-docs": "^5.2.0-beta.29  ",
     "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/react": "^5.2.0-beta.29",
     "@svgr/cli": "^4.3.2",
     "@types/jest": "^24.0.17",
     "@types/node": "^12.7.1",
@@ -50,6 +48,7 @@
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.18",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "jest": "^24.8.0",
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.18.2",
@@ -57,11 +56,12 @@
     "react-docgen-typescript-loader": "^3.1.0",
     "react-test-renderer": "^16.8.6",
     "rimraf": "^2.7.0",
+    "styled-components": "^4.3.2",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3",
     "tslint": "^5.18.0",
     "tslint-config-standard": "^8.0.1",
-    "tslint-react": "^4.0.0"
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
   }
 }
