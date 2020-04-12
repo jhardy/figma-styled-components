@@ -26,7 +26,7 @@ exports[`A default Option Button 1`] = `
   width: 24px;
 }
 
-.c1 {
+.c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -48,47 +48,47 @@ exports[`A default Option Button 1`] = `
   color: #000;
 }
 
-.c1:hover {
+.c0:hover {
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 
-.c1:active .c2 {
-  background: rgba(0,0,0,0.1);
-}
-
-.c1:focus {
-  box-shadow: inset 0 0 0 2px #18A0FB;
-}
-
-.c0 {
-  background: transparent;
-  color: #000000;
-}
-
-.c0:hover {
-  background: rgba(0,0,0,0.1);
-  box-shadow: none;
-}
-
-.c0:active {
-  background: #18A0FB;
-  color: #fff;
-}
-
 .c0:active .c2 {
-  background: transparent;
+  background: rgba(0,0,0,0.1);
 }
 
 .c0:focus {
   box-shadow: inset 0 0 0 2px #18A0FB;
 }
 
-.c0 .c2 {
+.c1 {
+  background: transparent;
+  color: #000000;
+}
+
+.c1:hover {
+  background: rgba(0,0,0,0.1);
+  box-shadow: none;
+}
+
+.c1:active {
+  background: #18A0FB;
+  color: #fff;
+}
+
+.c1:active .c2 {
+  background: transparent;
+}
+
+.c1:focus {
+  box-shadow: inset 0 0 0 2px #18A0FB;
+}
+
+.c1 .c2 {
   background: transparent;
 }
 
 <button
-  className="c0 c1"
+  className="c0 sc-AxiKw sc-AxhCb c1"
   disabled={false}
 >
   <div
@@ -140,11 +140,7 @@ exports[`A dsiabled Option Button 1`] = `
   width: 24px;
 }
 
-.c4:active .c2 {
-  background: rgba(0,0,0,0.1);
-}
-
-.c1 {
+.c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -166,47 +162,8 @@ exports[`A dsiabled Option Button 1`] = `
   color: #000;
 }
 
-.c1:hover {
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-}
-
-.c1:active .c2 {
-  background: transparent;
-}
-
-.c1:focus {
-  box-shadow: inset 0 0 0 2px #18A0FB;
-}
-
-.c5:active .c2 {
-  background: transparent;
-}
-
-.c5 .c2 {
-  background: transparent;
-}
-
-.c6:active .c2 {
-  background: transparent;
-}
-
-.c6 .c2 {
-  background: transparent;
-}
-
-.c0 {
-  background: transparent;
-  color: #000000;
-}
-
 .c0:hover {
-  background: transparent;
-  box-shadow: none;
-}
-
-.c0:active {
-  background: transparent;
-  color: #000;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 
 .c0:active .c2 {
@@ -217,12 +174,35 @@ exports[`A dsiabled Option Button 1`] = `
   box-shadow: inset 0 0 0 2px #18A0FB;
 }
 
-.c0 .c2 {
+.c1 {
+  background: transparent;
+  color: #000000;
+}
+
+.c1:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.c1:active {
+  background: transparent;
+  color: #000;
+}
+
+.c1:active .c2 {
+  background: transparent;
+}
+
+.c1:focus {
+  box-shadow: inset 0 0 0 2px #18A0FB;
+}
+
+.c1 .c2 {
   background: transparent;
 }
 
 <button
-  className="c0 c1"
+  className="c0 sc-AxiKw sc-AxhCb c1"
   disabled={true}
 >
   <div
@@ -274,7 +254,7 @@ exports[`A on Option Button 1`] = `
   width: 24px;
 }
 
-.c1 {
+.c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -296,55 +276,47 @@ exports[`A on Option Button 1`] = `
   color: #000;
 }
 
-.c1:hover {
+.c0:hover {
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 
-.c1:active .c2 {
+.c0:active .c2 {
   background: rgba(0,0,0,0.1);
 }
 
-.c1:focus {
+.c0:focus {
   box-shadow: inset 0 0 0 2px #18A0FB;
 }
 
-.c4:active .c2 {
-  background: transparent;
-}
-
-.c4 .c2 {
-  background: transparent;
-}
-
-.c0 {
+.c1 {
   background: #18A0FB;
   color: #ffffff;
 }
 
-.c0:hover {
+.c1:hover {
   background: #18A0FB;
   box-shadow: none;
 }
 
-.c0:active {
+.c1:active {
   background: #18A0FB;
   color: #fff;
 }
 
-.c0:active .c2 {
+.c1:active .c2 {
   background: transparent;
 }
 
-.c0:focus {
+.c1:focus {
   box-shadow: inset 0 0 0 2px rgba(0,0,0,0.3);
 }
 
-.c0 .c2 {
+.c1 .c2 {
   background: transparent;
 }
 
 <button
-  className="c0 c1"
+  className="c0 sc-AxiKw sc-AxhCb c1"
   disabled={false}
 >
   <div

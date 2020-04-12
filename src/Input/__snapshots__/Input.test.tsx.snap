@@ -98,7 +98,7 @@ exports[`A  Input with Icon 1`] = `
   className="c0"
 >
   <div
-    className="icon-holder c1"
+    className="c1 icon-holder"
   >
     <div
       className="c2"

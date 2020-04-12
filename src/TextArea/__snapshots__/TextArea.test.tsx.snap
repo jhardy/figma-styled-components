@@ -68,7 +68,7 @@ exports[`A  TextArea with placeholder 1`] = `
 }
 
 <textarea
-  className="c0"
+  className="sc-AxjAm c0"
   placeholder="Hello"
 />
 `;
@@ -141,6 +141,6 @@ exports[`A default TextArea 1`] = `
 }
 
 <textarea
-  className="c0"
+  className="sc-AxjAm c0"
 />
 `;

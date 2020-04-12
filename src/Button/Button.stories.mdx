@@ -51,10 +51,12 @@ import { Icon } from '../Icon/Icon'
         </Button>
       </div>
     </div>
-     <div className='component-box'>
-        <Text size='large'>Full Width</Text>
-        <Button fullWidth={true}>Full Width</Button>
-        <Button variant="primary" fullWidth={true}>Full Width</Button>
+    <div className='component-box'>
+      <Text size='large'>Full Width</Text>
+      <Button fullWidth={true}>Full Width</Button>
+      <Button variant='primary' fullWidth={true}>
+        Full Width
+      </Button>
     </div>
   </div>
 </Story>
@@ -68,7 +70,7 @@ import { Icon } from '../Icon/Icon'
 | variant     | <code>"primary" &#124; "secondary"</code> | <code>"secondary"</code> |    -     | Button's appearance                   |
 | destructive | boolean                                   | false                    |    -     | If button's action is destructive     |
 | disabled    | boolean                                   | false                    |    -     | If button is disabled                 |
-| fullWidth | boolean                                |    -    |    -     | Button takes up 100% of its container |
+| fullWidth   | boolean                                   | -                        |    -     | Button takes up 100% of its container |
 | onClick     | function                                  | -                        |    -     | Callback for Button's `onClick` event |
 
 </div>
@@ -78,6 +80,7 @@ import { Icon } from '../Icon/Icon'
 <Story name='IconButton'>
   <div className='component-box'>
     <IconButton icon={<Icon name='Styles' />} />
+    <IconButton icon={<Icon name='Styles' />} toggled />
   </div>
 </Story>
 
@@ -88,7 +91,7 @@ import { Icon } from '../Icon/Icon'
 | Prop Name | Type                                   | Default | Required | Description                           |
 | :-------- | :------------------------------------- | :-----: | :------: | :------------------------------------ |
 | icon      | <code>JSX.Element &#124; string</code> |    -    |   yes    | Icon for the button                   |
-| on        | boolean                                |  false  |    -     | If the button is toggled on           |
+| toggled   | boolean                                |  false  |    -     | If the button is toggled on           |
 | disabled  | boolean                                |  false  |    -     | If the button is disabled             |
 | onClick   | function                               |    -    |    -     | Callback for button's `onClick` event |
 
@@ -99,6 +102,7 @@ import { Icon } from '../Icon/Icon'
 <Story name='OptionButton'>
   <div className='component-box'>
     <OptionButton icon={<Icon name='LinkConnected' size={32} />} />
+     <OptionButton icon={<Icon name='LinkConnected' size={32} />} toggled/>
   </div>
 </Story>
 
@@ -109,7 +113,7 @@ import { Icon } from '../Icon/Icon'
 | Prop Name | Type                                   | Default | Required | Description                           |
 | :-------- | :------------------------------------- | :-----: | :------: | :------------------------------------ |
 | icon      | <code>JSX.Element &#124; string</code> |    -    |   yes    | Icon for the button                   |
-| on        | boolean                                |  false  |    -     | If the button is toggled on           |
+| toggled   | boolean                                |  false  |    -     | If the button is toggled on           |
 | disabled  | boolean                                |  false  |    -     | If the button is disabled             |
 | onClick   | function                               |    -    |    -     | Callback for button's `onClick` event |
 

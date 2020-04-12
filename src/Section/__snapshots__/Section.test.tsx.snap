@@ -44,23 +44,23 @@ exports[`A Section with actions 1`] = `
   justify-content: space-between;
 }
 
-.c2 {
+.c0 {
   padding: 8px;
 }
 
-.c2 .c3 {
+.c0 .c3 {
   opacity: 1;
 }
 
-.c2 .c7 {
+.c0 .c7 {
   display: block;
 }
 
-.c2:hover .c3 {
+.c0:hover .c3 {
   opacity: 1;
 }
 
-.c1 + .c0 {
+.c2 + .c1 {
   border-top: solid 1px rgba(0,0,0,0.1);
 }
 
@@ -72,7 +72,7 @@ exports[`A Section with actions 1`] = `
     className="c3 c4"
   >
     <span
-      className="c5"
+      className="sc-AxirZ c5"
     >
       Section
     </span>
@@ -150,35 +150,23 @@ exports[`A collapsed Section 1`] = `
   justify-content: space-between;
 }
 
-.c8 .c3 {
-  opacity: 1;
-}
-
-.c8 .c7 {
-  display: block;
-}
-
-.c8:hover .c3 {
-  opacity: 1;
-}
-
-.c2 {
+.c0 {
   padding: 8px;
 }
 
-.c2 .c3 {
+.c0 .c3 {
   opacity: 0.5;
 }
 
-.c2 .c7 {
+.c0 .c7 {
   display: none;
 }
 
-.c2:hover .c3 {
+.c0:hover .c3 {
   opacity: 1;
 }
 
-.c1 + .c0 {
+.c2 + .c1 {
   border-top: solid 1px rgba(0,0,0,0.1);
 }
 
@@ -190,7 +178,7 @@ exports[`A collapsed Section 1`] = `
     className="c3 c4"
   >
     <span
-      className="c5"
+      className="sc-AxirZ c5"
     >
       Section
     </span>
@@ -263,23 +251,23 @@ exports[`A default Section 1`] = `
   justify-content: space-between;
 }
 
-.c2 {
+.c0 {
   padding: 8px;
 }
 
-.c2 .c3 {
+.c0 .c3 {
   opacity: 1;
 }
 
-.c2 .c6 {
+.c0 .c6 {
   display: block;
 }
 
-.c2:hover .c3 {
+.c0:hover .c3 {
   opacity: 1;
 }
 
-.c1 + .c0 {
+.c2 + .c1 {
   border-top: solid 1px rgba(0,0,0,0.1);
 }
 
@@ -291,7 +279,7 @@ exports[`A default Section 1`] = `
     className="c3 c4"
   >
     <span
-      className="c5"
+      className="sc-AxirZ c5"
     >
       Section
     </span>
