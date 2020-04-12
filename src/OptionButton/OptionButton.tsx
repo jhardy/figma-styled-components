@@ -4,15 +4,15 @@ import { IconNames } from '../Icon/IconNames'
 
 export interface OptionButtonProps {
   icon: IconNames | JSX.Element | string
-  on?: boolean
+  toggled?: boolean
   disabled?: boolean
   onClick?: React.ReactEventHandler
 }
 
-export const OptionButtonContent = styled.div<{on: boolean, disabled: boolean}>`
+export const OptionButtonContent = styled.div<{toggled: boolean, disabled: boolean}>`
   align-items: center;
   border-radius: 2px;
-  background: ${ (props) => props.on ? 'rgba(0, 0, 0, 0.1)' : 'transparent'};
+  background: ${ (props) => props.toggled ? 'rgba(0, 0, 0, 0.1)' : 'transparent'};
   border: none;
   display:flex;
   height: 24px;
@@ -50,10 +50,10 @@ const OptionButtonWrapper = styled.button`
   }
 `
 
-const OptionButtonFactory: React.FC<OptionButtonProps> = ({ icon, on, onClick, disabled, ...props }) => {
+const OptionButtonFactory: React.FC<OptionButtonProps> = ({ icon, toggled, onClick, disabled, ...props }) => {
   return(
     <OptionButtonWrapper onClick={onClick} disabled={disabled || false} {...props}>
-      <OptionButtonContent on={on || false} disabled={disabled || false} >
+      <OptionButtonContent toggled={toggled || false} disabled={disabled || false} >
         {icon}
       </OptionButtonContent>
     </OptionButtonWrapper>

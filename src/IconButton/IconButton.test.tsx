@@ -18,7 +18,7 @@ test('A default Option Button', () => {
 })
 
 test('A on Option Button', () => {
-  const tree = renderer.create(<IconButton on={true} icon={testIcon} />).toJSON()
+  const tree = renderer.create(<IconButton toggled={true} icon={testIcon} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 

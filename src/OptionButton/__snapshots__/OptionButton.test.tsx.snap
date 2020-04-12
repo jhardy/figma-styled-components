@@ -61,7 +61,7 @@ exports[`A default Option Button 1`] = `
 }
 
 <button
-  className="c0"
+  className="c0 "
   disabled={false}
 >
   <div
@@ -113,10 +113,6 @@ exports[`A dsiabled Option Button 1`] = `
   width: 24px;
 }
 
-.c3:active .c1 {
-  background: rgba(0,0,0,0.1);
-}
-
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -152,7 +148,7 @@ exports[`A dsiabled Option Button 1`] = `
 }
 
 <button
-  className="c0"
+  className="c0 "
   disabled={true}
 >
   <div
@@ -239,7 +235,7 @@ exports[`A on Option Button 1`] = `
 }
 
 <button
-  className="c0"
+  className="c0 "
   disabled={false}
 >
   <div
