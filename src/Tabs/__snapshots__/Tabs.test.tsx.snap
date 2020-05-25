@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A set of tabs 1`] = `
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter",sans-serif;
+  color: rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-size: 11px;
+  -webkit-letter-spacing: 0.005em;
+  -moz-letter-spacing: 0.005em;
+  -ms-letter-spacing: 0.005em;
+  letter-spacing: 0.005em;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  color: rgba(0,0,0,0.8);
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.c0 {
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+}
+
+.c1 {
+  border: none;
+  background: #fff;
+  outline: none;
+  padding: 0 8px;
+}
+
+.c1 .c2 {
+  opacity: 0.5;
+}
+
+.c1[aria-selected='true'] .c2 {
+  opacity: 1;
+}
+
+.c1:hover .c2 {
+  opacity: 1;
+}
+
+<div
+  className=""
+  data-orientation="horizontal"
+  data-reach-tabs=""
+>
+  <div
+    aria-orientation="horizontal"
+    className="c0"
+    data-reach-tab-list=""
+    onKeyDown={[Function]}
+    role="tablist"
+  >
+    <button
+      aria-controls="tabs--1--panel---1"
+      aria-selected={false}
+      className="c1"
+      data-orientation="horizontal"
+      data-reach-tab=""
+      id="tabs--1--tab---1"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      role="tab"
+      tabIndex={-1}
+      type="button"
+    >
+      <span
+        className="sc-AxjAm c2 c3"
+      >
+        Design
+      </span>
+    </button>
+    <button
+      aria-controls="tabs--1--panel---1"
+      aria-selected={false}
+      className="c1"
+      data-orientation="horizontal"
+      data-reach-tab=""
+      id="tabs--1--tab---1"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      role="tab"
+      tabIndex={-1}
+      type="button"
+    >
+      <span
+        className="sc-AxjAm c2 c3"
+      >
+        Prototype
+      </span>
+    </button>
+    <button
+      aria-controls="tabs--1--panel---1"
+      aria-selected={false}
+      className="c1"
+      data-orientation="horizontal"
+      data-reach-tab=""
+      id="tabs--1--tab---1"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      role="tab"
+      tabIndex={-1}
+      type="button"
+    >
+      <span
+        className="sc-AxjAm c2 c3"
+      >
+        Code
+      </span>
+    </button>
+  </div>
+  <div
+    className=""
+    data-reach-tab-panels=""
+  >
+    <div
+      aria-labelledby="tabs--1--tab---1"
+      className=""
+      data-reach-tab-panel=""
+      hidden={true}
+      id="tabs--1--panel---1"
+      role="tabpanel"
+      tabIndex={-1}
+    >
+      panel 1
+    </div>
+    <div
+      aria-labelledby="tabs--1--tab---1"
+      className=""
+      data-reach-tab-panel=""
+      hidden={true}
+      id="tabs--1--panel---1"
+      role="tabpanel"
+      tabIndex={-1}
+    >
+      panel 2
+    </div>
+    <div
+      aria-labelledby="tabs--1--tab---1"
+      className=""
+      data-reach-tab-panel=""
+      hidden={true}
+      id="tabs--1--panel---1"
+      role="tabpanel"
+      tabIndex={-1}
+    >
+      panel 3
+    </div>
+  </div>
+</div>
+`;

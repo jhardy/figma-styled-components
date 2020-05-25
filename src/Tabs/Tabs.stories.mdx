@@ -1,0 +1,40 @@
+import { Tabs, Tab, TabList, TabPanels, TabPanel } from './Tabs'
+import { Story, Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title='MDX|Tabs' component={Tabs} />
+
+# Tabs
+
+<Story name='Tabs'>
+  <div className='component-box'>
+    <Tabs>
+      <TabList>
+        <Tab>Design</Tab>
+        <Tab>Prototype</Tab>
+        <Tab>Code</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>panel 1</TabPanel>
+        <TabPanel>panel 2</TabPanel>
+        <TabPanel>panel 3</TabPanel>
+      </TabPanels>
+    </Tabs>
+  </div>
+</Story>
+
+```
+import { Tabs, Tab, TabList, TabPanels, TabPanel } from 'figma-styled-components'
+
+<Tabs>
+  <TabList>
+    <Tab>Design</Tab>
+    <Tab>Prototype</Tab>
+    <Tab>Code</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>panel 1</TabPanel>
+    <TabPanel>panel 2</TabPanel>
+    <TabPanel>panel 3</TabPanel>
+  </TabPanels>
+</Tabs>
+```

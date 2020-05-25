@@ -28,6 +28,7 @@
   "author": "Jared Hardy",
   "license": "ISC",
   "dependencies": {
+    "@reach/tabs": "^0.10.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
